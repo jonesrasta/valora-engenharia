@@ -11,11 +11,9 @@ export default function App() {
   const current = sections.find((s) => s.id === active)!;
 
   return (
-    <div className="flex h-screen bg-zinc-100 text-white">
-      {/* HEADER MOBILE */}
+    <div className="flex h-screen bg-zinc-100 text-zinc-900">
       <Header isOpen={isOpen} setOpen={setOpen} />
 
-      {/* SIDEBAR */}
       <Sidebar
         sections={sections}
         active={active}
@@ -24,16 +22,16 @@ export default function App() {
         setOpen={setOpen}
       />
 
-      {/* CONTEÚDO */}
-<main className="flex-1 flex items-center justify-center p-6 pt-20 md:pt-0">
-  <div className="w-full">
-    <h1 className="text-3xl font-bold mb-6">
-      {current.label}
-    </h1>
+      <main className="flex-1 flex items-center justify-center p-2 md:pt-0">
+        <div className="w-full max-w-6xl">
+          <h1 className="text-3xl font-bold mb-6">
+            {current.label}
+          </h1>
 
-    <Carousel images={current.gallery} />
-  </div>
-</main>
+          {/* 🔥 AGORA CORRETO */}
+          <Carousel slides={current.slides} />
+        </div>
+      </main>
     </div>
   );
 }
