@@ -24,11 +24,9 @@ export default function App() {
 
       <main className="flex-1 flex items-center justify-center p-2 md:pt-0">
         <div className="w-full max-w-6xl">
-          <h1 className="text-3xl font-bold mb-6">
+          {/* <h1 className="text-3xl font-bold mb-6">
             {current.label}
-          </h1>
-
-          {/* 🔥 AGORA CORRETO */}
+          </h1> */}
           <Carousel slides={current.slides} />
         </div>
       </main>

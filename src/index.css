@@ -12,7 +12,7 @@
   --color-primary: #020617;
   --color-accent: #f59e0b;
 
-  --font-sans: "NeueMetana", system-ui, sans-serif;
+  --font-sans: "NeueMetana", sans-serif;
 }
 
 /* =========================
@@ -33,7 +33,7 @@ body,
 
 body {
   margin: 0;
-  font-family: var(--font-sans);
+  font-family: "NeueMetana", sans-serif !important;
   background: var(--color-bg);
   color: var(--color-text);
   overflow: hidden; /* 🔥 evita scroll lateral bugado */
@@ -79,14 +79,14 @@ p {
 
 @font-face {
   font-family: "NeueMetana";
-  src: url("/src/assets/fonts/NeueMetana-Regular.otf") format("otf");
+  src: url("/fonts/NeueMetana-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "NeueMetana";
-  src: url("/src/assets/fonts/NeueMetana-Bold.otf") format("otf");
+  src: url("/fonts/NeueMetana-Bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
 }

@@ -47,7 +47,7 @@ export default function Sidebar({
                 setOpen(false); // fecha no mobile
               }}
               className={`
-                text-left px-3 py-2 rounded-md transition
+                text-left font-medium px-3 py-2 rounded-md transition
                 ${
                   active === item.id
                     ? "bg-white/20"

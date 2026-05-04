@@ -22,3 +22,17 @@
 * {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
+
+@font-face {
+  font-family: "NeueMetana";
+  src: url("/public/fonts/NeueMetana-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "NeueMetana";
+  src: url("/public/fonts/NeueMetana-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
