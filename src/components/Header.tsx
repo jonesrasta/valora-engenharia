@@ -12,7 +12,7 @@ export default function Header({ isOpen, setOpen }: Props) {
     <header className="md:hidden fixed top-0 left-0 w-full h-16 bg-[#22303e] backdrop-blur-md text-white flex items-center justify-end px-4 z-50 shadow">
       {/* <img src={logo} alt="Valora" className="h-8" /> */}
 
-      <Hamburger toggled={isOpen} toggle={setOpen} size={29} distance="sm"  hideOutline={false} />
+      <Hamburger toggled={isOpen} toggle={setOpen} size={29} distance="sm" duration={0.4} hideOutline={false} />
     </header>
   );
 }

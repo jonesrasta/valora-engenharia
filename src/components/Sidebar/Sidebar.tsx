@@ -1,3 +1,71 @@
+// import type { Section } from "../../data/branding";
+// import logo from "../../assets/logo.svg";
+
+// interface Props {
+//   sections: Section[];
+//   active: string;
+//   onChange: (id: string) => void;
+//   isOpen: boolean;
+//   setOpen: (open: boolean) => void;
+// }
+
+// export default function Sidebar({
+//   sections,
+//   active,
+//   onChange,
+//   isOpen,
+//   setOpen,
+// }: Props) {
+//   return (
+//     <>
+//       {/* OVERLAY MOBILE */}
+//       {isOpen && (
+//         <div
+//           className="fixed inset-0 bg-black/50 z-40 md:hidden"
+//           onClick={() => setOpen(false)}
+//         />
+//       )}
+
+//       <aside
+//         className={`
+//           fixed md:static
+//           top-0 left-0 h-full w-64
+//           bg-[#22303e] text-white p-6
+//           z-50 transform transition-transform duration-300
+//           ${isOpen ? "translate-x-0" : "-translate-x-full"}
+//           md:translate-x-0
+//         `}
+//       >
+//         <img src={logo} alt="Valora" className="h-10 mb-10 mt-8" />
+
+//         <nav className="flex flex-col gap-2">
+//           {sections.map((item) => (
+//             <button
+//               key={item.id}
+//               onClick={() => {
+//                 onChange(item.id);
+//                 setOpen(false); // fecha no mobile
+//               }}
+//               className={`
+//                 text-left font-medium px-3 py-2 rounded-md transition
+//                 ${
+//                   active === item.id
+//                     ? "bg-white/20"
+//                     : "hover:bg-white/10"
+//                 }
+//               `}
+//             >
+//               {item.label}
+//             </button>
+//           ))}
+//         </nav>
+//       </aside>
+//     </>
+//   );
+// }
+
+
+import { motion, AnimatePresence } from "framer-motion";
 import type { Section } from "../../data/branding";
 import logo from "../../assets/logo.svg";
 
@@ -18,23 +86,37 @@ export default function Sidebar({
 }: Props) {
   return (
     <>
-      {/* OVERLAY MOBILE */}
-      {isOpen && (
-        <div
-          className="fixed inset-0 bg-black/50 z-40 md:hidden"
-          onClick={() => setOpen(false)}
-        />
-      )}
+      {/* OVERLAY */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.4 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            className="fixed inset-0 bg-black backdrop-blur-sm z-40 md:hidden"
+            onClick={() => setOpen(false)}
+          />
+        )}
+      </AnimatePresence>
 
-      <aside
-        className={`
+      {/* SIDEBAR */}
+      <motion.aside
+        initial={false}
+        animate={{
+          x: isOpen ? 0 : -280,
+        }}
+        transition={{
+          type: "spring",
+          stiffness: 260,
+          damping: 28,
+        }}
+        className="
           fixed md:static
           top-0 left-0 h-full w-64
-          bg-[#22303e] text-white p-6
-          z-50 transform transition-transform duration-300
-          ${isOpen ? "translate-x-0" : "-translate-x-full"}
-          md:translate-x-0
-        `}
+          bg-[#22303e9a] backdrop-blur-md text-white p-6
+          z-50
+        "
       >
         <img src={logo} alt="Valora" className="h-10 mb-10 mt-8" />
 
@@ -44,14 +126,14 @@ export default function Sidebar({
               key={item.id}
               onClick={() => {
                 onChange(item.id);
-                setOpen(false); // fecha no mobile
+                setOpen(false);
               }}
               className={`
-                text-left font-medium px-3 py-2 rounded-md transition
+                text-left font-medium px-3 py-2 rounded-md transition-all duration-300
                 ${
                   active === item.id
                     ? "bg-white/20"
-                    : "hover:bg-white/10"
+                    : "hover:bg-white/10 hover:translate-x-1"
                 }
               `}
             >
@@ -59,7 +141,7 @@ export default function Sidebar({
             </button>
           ))}
         </nav>
-      </aside>
+      </motion.aside>
     </>
   );
 }
