@@ -1,4 +1,4 @@
-import { Squeeze as Hamburger } from 'hamburger-react'
+import { Cross as Hamburger } from 'hamburger-react'
 import type { Dispatch, SetStateAction } from "react";
 // import logo from "../assets/logo.svg";
 
