@@ -17,7 +17,7 @@ export default function App() {
       <Header isOpen={isOpen} setOpen={setOpen} />
 
       {/* CONTEÚDO */}
-      <div className="flex flex-1 overflow-hidden">
+      <div className="flex flex-1 overflow-x-hidden">
         
         <Sidebar
           sections={sections}

@@ -199,9 +199,9 @@ export default function Sidebar({
         {shouldShow && (
 <motion.aside
   key="sidebar"
-  initial={{ x: "-100%" }}
+  initial={{ x: "-120%" }}
   animate={{ x: 0 }}
-  exit={{ x: "-100%" }}
+  exit={{ x: "-120%" }}
   transition={{
     type: "spring",
     stiffness: 260,
