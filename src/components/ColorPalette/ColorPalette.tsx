@@ -57,9 +57,10 @@ export default function ColorPalette() {
   return (
     <div className="w-full p-4 md:p-10 bg-zinc-200 min-h-screen">
       
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-        
-        {colors.map((color, index) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:mt-24 mt-0">
+
+        {/* PRIMEIRA LINHA */}
+        {colors.slice(0, 4).map((color, index) => (
           <motion.div
             key={color.name}
             initial={{ opacity: 0, y: 40 }}
@@ -68,17 +69,13 @@ export default function ColorPalette() {
             className={`
               rounded-3xl p-6 flex flex-col justify-between
               ${color.text || "text-zinc-900"}
-              ${color.span === 2 ? "md:col-span-2" : ""}
-              ${color.span === 4 ? "md:col-span-4" : ""}
             `}
-            style={{ backgroundColor: color.bg, minHeight: 200 }}
+            style={{ backgroundColor: color.bg, minHeight: 220 }}
           >
-            {/* Top */}
             <span className="text-sm md:text-base font-medium">
               {color.name}
             </span>
 
-            {/* Bottom */}
             <div className="text-xs md:text-sm leading-relaxed">
               <p>{color.hex}</p>
               <p>{color.rgb}</p>
@@ -86,6 +83,25 @@ export default function ColorPalette() {
             </div>
           </motion.div>
         ))}
+
+        {/* SEGUNDA LINHA (FULL WIDTH) */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+          className="md:col-span-4 rounded-3xl p-6 flex flex-col justify-between text-white"
+          style={{ backgroundColor: colors[4].bg, minHeight: 220 }}
+        >
+          <span className="text-sm md:text-base font-medium">
+            {colors[4].name}
+          </span>
+
+          <div className="text-xs md:text-sm leading-relaxed">
+            <p>{colors[4].hex}</p>
+            <p>{colors[4].rgb}</p>
+            <p>{colors[4].cmyk}</p>
+          </div>
+        </motion.div>
 
       </div>
     </div>

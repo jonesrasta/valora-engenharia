@@ -5,9 +5,9 @@
 ========================= */
 :root {
   --color-bg: #0b0f19;
-  --color-text: #e5e7eb;
-  --color-muted: #9ca3af;
-  --color-border: #1f2937;
+  --color-text: #0a1833;
+  --color-muted: #22303e;
+  --color-border: #22303e;
 
   --color-primary: #020617;
   --color-accent: #f59e0b;
@@ -36,7 +36,7 @@ body {
   font-family: "NeueMetana", sans-serif !important;
   background: var(--color-bg);
   color: var(--color-text);
-  overflow: hidden; /* 🔥 evita scroll lateral bugado */
+  overflow-x: hidden;
 }
 
 /* =========================
