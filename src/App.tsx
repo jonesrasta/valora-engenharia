@@ -8,7 +8,7 @@ export default function App() {
   const [active, setActive] = useState(sections[0].id);
   const [isOpen, setOpen] = useState(false);
 
-const current = sections.find((s) => s.id === active)!;
+  const current = sections.find((s) => s.id === active)!;
 
   return (
     <div className="h-screen bg-zinc-200 text-zinc-900 flex flex-col">
@@ -17,7 +17,7 @@ const current = sections.find((s) => s.id === active)!;
       <Header isOpen={isOpen} setOpen={setOpen} />
 
       {/* CONTEÚDO */}
-      <div className="flex flex-1">
+      <div className="flex flex-1 overflow-x-hidden">
         
         <Sidebar
           sections={sections}
