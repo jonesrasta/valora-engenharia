@@ -33,7 +33,7 @@ const colors: Color[] = [
     rgb: "34,48,62",
     cmyk: "45,23,0,76",
     bg: "#22303E",
-    text: "text-white",
+    text: "text-[#F2F9FC]",
   },
   {
     name: "Alice Blue",
@@ -48,7 +48,7 @@ const colors: Color[] = [
     rgb: "13,16,20",
     cmyk: "35,20,0,92",
     bg: "#0D1014",
-    text: "text-white",
+    text: "text-[#F2F9FC]",
     span: 4,
   },
 ];

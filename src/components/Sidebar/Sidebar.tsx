@@ -188,7 +188,7 @@ export default function Sidebar({
             animate={{ opacity: 0.4 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 bg-black z-40"
+            className="fixed inset-0 bg-[#22303E] z-40 backdrop-blur-sm"
             onClick={() => setOpen(false)}
           />
         )}
@@ -213,7 +213,7 @@ export default function Sidebar({
     w-[75%] max-w-70 md:w-64
     bg-[#22303ec7] md:bg-[#22303e]
     backdrop-blur-md md:backdrop-blur-none
-    text-white p-6 z-50 md:px-2
+    text-[#F2F9FC] p-6 z-50 md:px-2
   "
           >
             <img src={logo} alt="Valora" className="h-10 mb-10 mt-8 ml-2" />
@@ -227,11 +227,11 @@ export default function Sidebar({
                     if (!isDesktop) setOpen(false);
                   }}
                   className={`
-                    text-left font-medium px-4 py-3 rounded-md
+                    text-left font-medium md:px-6 px-4 py-3 rounded-md
                     transition-all duration-200
                     ${
                       active === item.id
-                        ? "bg-white/20"
+                        ? "bg-[#ffffff23]"
                         : "hover:bg-white/10 hover:translate-x-1"
                     }
                   `}
