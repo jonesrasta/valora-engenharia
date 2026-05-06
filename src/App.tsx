@@ -11,7 +11,7 @@ export default function App() {
   const current = sections.find((s) => s.id === active)!;
 
   return (
-    <div className="h-screen bg-zinc-100 text-zinc-900 flex flex-col">
+    <div className="h-screen bg-zinc-200 text-zinc-900 flex flex-col">
       
       {/* HEADER */}
       <Header isOpen={isOpen} setOpen={setOpen} />
@@ -27,7 +27,7 @@ export default function App() {
           setOpen={setOpen}
         />
 
-        <main className="flex-1 flex items-center justify-center p-2">
+        <main className="flex-1 flex items-center justify-center md:p-8 ">
           <div className="w-full max-w-6xl">
             <Carousel slides={current.slides} />
           </div>

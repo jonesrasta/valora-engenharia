@@ -27,14 +27,14 @@ const colors: Color[] = [
     cmyk: "9,3,0,25",
     bg: "#ACB9BF",
   },
-{
-  name: "Gunmetal",
-  hex: "22303E",
-  rgb: "34,48,62",
-  cmyk: "45,23,0,76",
-  bg: "#22303E",
-  text: "text-white",
-},
+  {
+    name: "Gunmetal",
+    hex: "22303E",
+    rgb: "34,48,62",
+    cmyk: "45,23,0,76",
+    bg: "#22303E",
+    text: "text-white",
+  },
   {
     name: "Alice Blue",
     hex: "F2F9FC",
@@ -55,10 +55,8 @@ const colors: Color[] = [
 
 export default function ColorPalette() {
   return (
-    <div className="w-full p-4 md:p-10 bg-zinc-200 min-h-screen">
-      
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:mt-24 mt-0">
-
+    <div className="w-full p-4 md:p-10 min-h-screen">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:mt-24 mt-28">
         {/* PRIMEIRA LINHA */}
         {colors.slice(0, 4).map((color, index) => (
           <motion.div
@@ -72,7 +70,7 @@ export default function ColorPalette() {
             `}
             style={{ backgroundColor: color.bg, minHeight: 220 }}
           >
-            <span className="text-sm md:text-base font-medium">
+            <span className="text-sm md:text-base font-bold tracking-wide">
               {color.name}
             </span>
 
@@ -102,7 +100,6 @@ export default function ColorPalette() {
             <p>{colors[4].cmyk}</p>
           </div>
         </motion.div>
-
       </div>
     </div>
   );

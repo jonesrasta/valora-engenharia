@@ -2,7 +2,7 @@ import logo from "../../assets/logo.svg";
 
 export default function Cover() {
   return (
-<div className="w-full h-150 md:h-200 bg-[#22303e] flex items-center justify-center rounded-2xl shadow-xl">
+<div className="w-full h-full bg-[#22303e] flex items-center justify-center shadow-xl">
   <img
     src={logo}
     alt="Valora"
