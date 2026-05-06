@@ -213,10 +213,10 @@ export default function Sidebar({
     w-[75%] max-w-70 md:w-64
     bg-[#22303ec7] md:bg-[#22303e]
     backdrop-blur-md md:backdrop-blur-none
-    text-white p-6 z-50
+    text-white p-6 z-50 md:px-2
   "
           >
-            <img src={logo} alt="Valora" className="h-10 mb-10 mt-8" />
+            <img src={logo} alt="Valora" className="h-10 mb-10 mt-8 ml-2" />
 
             <nav className="flex flex-col gap-2">
               {sections.map((item) => (
@@ -227,7 +227,7 @@ export default function Sidebar({
                     if (!isDesktop) setOpen(false);
                   }}
                   className={`
-                    text-left font-medium px-3 py-2 rounded-md
+                    text-left font-medium px-4 py-3 rounded-md
                     transition-all duration-200
                     ${
                       active === item.id

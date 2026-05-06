@@ -18,7 +18,7 @@ export default function TypographyShowcase() {
           {/* Alphabet */}
           <div className="text-[#22303e] text-2xl tracking-wide leading-relaxed mb-16 [&_p]:no-underline">
             <p>abcdefghijklmnopqrstuvwxyz</p>
-            <p>opqrstuvwxyz</p>
+            {/* <p>opqrstuvwxyz</p> */}
             {/* <p>1234567890</p> */}
           </div>
 
@@ -71,7 +71,7 @@ export default function TypographyShowcase() {
           >
             <div className="text-[#22303e] text-3xl tracking-wide leading-relaxed">
               <p>abcdefghijklmnopqrstuvwxyz</p>
-              <p>opqrstuvwxyz</p>
+              {/* <p>opqrstuvwxyz</p> */}
               {/* <p>1234567890</p> */}
             </div>
 
