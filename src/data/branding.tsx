@@ -5,11 +5,9 @@ import TypographyShowcase from "../components/TypographyShowcase/TypographyShowc
 import SectionBlock from "../components/SectionBlock/SectionBlock";
 import TypographySecundary from "../components/TypographyShowcase/TypographySecundary";
 
-export interface Slide {
-  type: "image" | "component";
-  src?: string;
-  component?: ReactNode;
-}
+export type Slide =
+  | { type: "image"; src: string }
+  | { type: "component"; component: ReactNode };
 
 export interface Section {
   id: string;
