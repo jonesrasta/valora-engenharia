@@ -72,7 +72,7 @@ export default function TypographyShowcase() {
           </motion.h1>
 
           {/* Alphabet */}
-          <div className="text-[#22303e] text-base tracking-wide leading-relaxed mb-16">
+          <div className="text-[#22303e] text-base tracking-wide leading-relaxed mb-16 [&_p]:no-underline">
             <p>abcdefghijklmnopqrstuvwxyz</p>
             <p>opqrstuvwxyz</p>
             <p>1234567890</p>

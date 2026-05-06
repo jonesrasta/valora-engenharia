@@ -56,50 +56,39 @@ const colors: Color[] = [
 export default function ColorPalette() {
   return (
     <div className="w-full p-4 md:p-10 min-h-screen">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:mt-24 mt-28">
-        {/* PRIMEIRA LINHA */}
-        {colors.slice(0, 4).map((color, index) => (
-          <motion.div
-            key={color.name}
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 }}
-            className={`
-              rounded-3xl p-6 flex flex-col justify-between
-              ${color.text || "text-[#22303E]"}
-            `}
-            style={{ backgroundColor: color.bg, minHeight: 220 }}
-          >
-            <span className="text-sm md:text-base font-bold tracking-wide">
-              {color.name}
-            </span>
+      
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:mt-24 mt-28">
 
-            <div className="text-xs md:text-sm leading-relaxed">
-              <p>{color.hex}</p>
-              <p>{color.rgb}</p>
-              <p>{color.cmyk}</p>
-            </div>
-          </motion.div>
-        ))}
+        {colors.map((color, index) => {
+          const isFull = color.span === 4;
 
-        {/* SEGUNDA LINHA (FULL WIDTH) */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="md:col-span-4 rounded-3xl p-6 flex flex-col justify-between text-white"
-          style={{ backgroundColor: colors[4].bg, minHeight: 220 }}
-        >
-          <span className="text-sm md:text-base font-medium">
-            {colors[4].name}
-          </span>
+          return (
+            <motion.div
+              key={color.name}
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              className={`
+                rounded-3xl p-6 flex flex-col justify-between
+                ${color.text || "text-[#22303E]"}
 
-          <div className="text-xs md:text-sm leading-relaxed">
-            <p>{colors[4].hex}</p>
-            <p>{colors[4].rgb}</p>
-            <p>{colors[4].cmyk}</p>
-          </div>
-        </motion.div>
+                ${isFull ? "col-span-2 md:col-span-4" : ""}
+              `}
+              style={{ backgroundColor: color.bg, minHeight: 220 }}
+            >
+              <span className="text-sm md:text-base font-bold tracking-wide">
+                {color.name}
+              </span>
+
+              <div className="text-xs md:text-sm leading-relaxed">
+                <p>{color.hex}</p>
+                <p>{color.rgb}</p>
+                <p>{color.cmyk}</p>
+              </div>
+            </motion.div>
+          );
+        })}
+
       </div>
     </div>
   );

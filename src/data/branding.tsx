@@ -3,6 +3,7 @@ import Cover from "../components/Cover/Cover";
 import ColorPalette from "../components/ColorPalette/ColorPalette";
 import TypographyShowcase from "../components/TypographyShowcase/TypographyShowcase";
 import SectionBlock from "../components/SectionBlock/SectionBlock";
+import TypographySecundary from "../components/TypographyShowcase/TypographySecundary";
 
 export interface Slide {
   type: "image" | "component";
@@ -42,6 +43,7 @@ export const sections: Section[] = [
       { type: "image", src: "/images/1.webp" },
       { type: "component", component: <ColorPalette /> },
       { type: "component", component: <TypographyShowcase /> },
+      { type: "component", component: <TypographySecundary /> },
     ],
   },
   {

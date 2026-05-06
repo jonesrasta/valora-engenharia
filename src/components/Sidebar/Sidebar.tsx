@@ -197,26 +197,25 @@ export default function Sidebar({
       {/* SIDEBAR */}
       <AnimatePresence>
         {shouldShow && (
-<motion.aside
-  key="sidebar"
-  initial={{ x: "-120%" }}
-  animate={{ x: 0 }}
-  exit={{ x: "-120%" }}
-  transition={{
-    type: "spring",
-    stiffness: 260,
-    damping: 28,
-  }}
-  className="
+          <motion.aside
+            key="sidebar"
+            initial={{ x: "-120%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "-120%" }}
+            transition={{
+              type: "spring",
+              stiffness: 260,
+              damping: 28,
+            }}
+            className="
     fixed md:static
     top-0 left-0 h-full
     w-[75%] max-w-70 md:w-64
     bg-[#22303ec7] md:bg-[#22303e]
     backdrop-blur-md md:backdrop-blur-none
-    text-white p-6 border-r-[0.1px] border-[#9c9c9c65]
-    z-50
+    text-white p-6 z-50
   "
->
+          >
             <img src={logo} alt="Valora" className="h-10 mb-10 mt-8" />
 
             <nav className="flex flex-col gap-2">
