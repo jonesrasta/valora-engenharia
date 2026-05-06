@@ -202,7 +202,7 @@ export default function Sidebar({
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.4 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-[#22303E] z-40 backdrop-blur-sm"
+            className="fixed inset-0 bg-[#22303E] z-30 backdrop-blur-sm"
             onClick={() => setOpen(false)}
           />
         )}
@@ -224,7 +224,7 @@ export default function Sidebar({
               bg-[#22303ec7] md:bg-[#22303e]
               backdrop-blur-md md:backdrop-blur-none
               text-[#F2F9FC]
-              p-6 z-50 md:px-2
+              p-6 z-50 md:z-40 md:px-2
             "
           >
             <img src={logo} alt="Valora" className="h-10 mb-10 mt-8 ml-2" />

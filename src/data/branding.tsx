@@ -74,7 +74,7 @@ export const sections: Section[] = [
         type: "component",
         component: (
          <SectionBlock className="my-16 px-4"
-             title="Apresentação da Marca"
+            title="Apresentação da Marca"
             texts={[
                "A Valora Engenharia nasce com o propósito de transformar projetos em valor real. Atuando com excelência técnica e visão estratégica, a empresa se destaca pela capacidade de unir engenharia, precisão e alto padrão em cada entrega.",
 

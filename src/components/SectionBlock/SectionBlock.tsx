@@ -60,7 +60,7 @@ export default function SectionBlock({
       {texts && (
         <div
           className={`
-            flex flex-col gap-4
+            flex flex-col gap-4 mb-6
             text-[17px] md:text-lg leading-relaxed
             ${textClassName}
           `}

@@ -41,7 +41,7 @@ export default function Carousel({ slides, onNext, onPrev }: Props) {
       </AnimatePresence>
 
       {/* BOTÕES */}
-      <div className="md:absolute fixed bottom-6 right-6 flex gap-2 z-20">
+      <div className="md:absolute fixed bottom-6 right-6 flex gap-2 z-50">
         <button
           onClick={onPrev}
           className="w-10 h-10 flex items-center justify-center rounded-full bg-black/40 backdrop-blur-md hover:bg-black/60 transition"

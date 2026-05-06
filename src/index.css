@@ -5,12 +5,10 @@
 ========================= */
 :root {
   --color-bg: #22303E;
-  /* --color-text: #0a1833;
-  --color-muted: #22303e;
-  --color-border: #22303e;
-
-  --color-primary: #020617;
-  --color-accent: #f59e0b; */
+  --color-text: #22303E;
+  /* --color-muted: #22303e; */
+  --color-primary: #22303E;
+  --color-accent: #F98058;
 
   --font-sans: "NeueMetana", sans-serif;
 }
@@ -35,7 +33,7 @@ body {
   margin: 0;
   font-family: "NeueMetana", sans-serif !important;
   background: var(--color-bg);
-  /* color: var(--color-text); */
+  color: var(--color-text);
   overflow-x: clip;
 }
 

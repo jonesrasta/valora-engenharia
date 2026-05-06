@@ -9,7 +9,7 @@ interface Props {
 
 export default function Header({ isOpen, setOpen }: Props) {
   return (
-    <header className="md:hidden fixed top-0 left-0 w-full h-18 bg-[#22303eef] backdrop-blur-md text-white flex items-center justify-end px-3 z-50 shadow">
+    <header className="md:hidden fixed top-0 left-0 w-full h-18 bg-[#22303efa] backdrop-blur-md text-white flex items-center justify-end px-3 z-40 shadow-sm">
       {/* <img src={logo} alt="Valora" className="h-8" /> */}
       <Hamburger toggled={isOpen} toggle={setOpen} size={29} duration={0.3} distance="sm" />
     </header>
