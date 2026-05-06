@@ -15,6 +15,10 @@ export interface Section {
   id: string;
   label: string;
   slides: Slide[];
+  children?: {
+    id: string;
+    label: string;
+  }[];
 }
 
 // export const sections: Section[] = [
@@ -93,14 +97,18 @@ export const sections: Section[] = [
     label: "Cores",
     slides: [{ type: "component", component: <ColorPalette /> }],
   },
-  {
-    id: "tipografia",
-    label: "Tipografia",
-    slides: [
-      { type: "component", component: <TypographyShowcase /> },
-      { type: "component", component: <TypographySecundary /> },
-    ],
-  },
+{
+  id: "tipografia",
+  label: "Tipografia",
+  children: [
+    { id: "tipografia-primaria", label: "Fonte Primária" },
+    { id: "tipografia-secundaria", label: "Fonte Secundária" },
+  ],
+  slides: [
+    { type: "component", component: <TypographyShowcase /> },
+    { type: "component", component: <TypographySecundary /> },
+  ],
+},
   {
     id: "logo",
     label: "Logo",

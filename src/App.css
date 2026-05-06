@@ -1,8 +1,6 @@
 @import "tailwindcss";
 
-/* =========================
-   🎯 Utilidades reais (mínimas)
-========================= */
+
 
 /* Scrollbar (opcional, mas bom pra UX) */
 ::-webkit-scrollbar {

@@ -1,154 +1,7 @@
-// import type { Section } from "../../data/branding";
-// import logo from "../../assets/logo.svg";
-
-// interface Props {
-//   sections: Section[];
-//   active: string;
-//   onChange: (id: string) => void;
-//   isOpen: boolean;
-//   setOpen: (open: boolean) => void;
-// }
-
-// export default function Sidebar({
-//   sections,
-//   active,
-//   onChange,
-//   isOpen,
-//   setOpen,
-// }: Props) {
-//   return (
-//     <>
-//       {/* OVERLAY MOBILE */}
-//       {isOpen && (
-//         <div
-//           className="fixed inset-0 bg-black/50 z-40 md:hidden"
-//           onClick={() => setOpen(false)}
-//         />
-//       )}
-
-//       <aside
-//         className={`
-//           fixed md:static
-//           top-0 left-0 h-full w-64
-//           bg-[#22303e] text-white p-6
-//           z-50 transform transition-transform duration-300
-//           ${isOpen ? "translate-x-0" : "-translate-x-full"}
-//           md:translate-x-0
-//         `}
-//       >
-//         <img src={logo} alt="Valora" className="h-10 mb-10 mt-8" />
-
-//         <nav className="flex flex-col gap-2">
-//           {sections.map((item) => (
-//             <button
-//               key={item.id}
-//               onClick={() => {
-//                 onChange(item.id);
-//                 setOpen(false); // fecha no mobile
-//               }}
-//               className={`
-//                 text-left font-medium px-3 py-2 rounded-md transition
-//                 ${
-//                   active === item.id
-//                     ? "bg-white/20"
-//                     : "hover:bg-white/10"
-//                 }
-//               `}
-//             >
-//               {item.label}
-//             </button>
-//           ))}
-//         </nav>
-//       </aside>
-//     </>
-//   );
-// }
-
-// import { motion, AnimatePresence } from "framer-motion";
-// import type { Section } from "../../data/branding";
-// import logo from "../../assets/logo.svg";
-
-// interface Props {
-//   sections: Section[];
-//   active: string;
-//   onChange: (id: string) => void;
-//   isOpen: boolean;
-//   setOpen: (open: boolean) => void;
-// }
-
-// export default function Sidebar({
-//   sections,
-//   active,
-//   onChange,
-//   isOpen,
-//   setOpen,
-// }: Props) {
-//   return (
-//     <>
-//       {/* OVERLAY */}
-//       <AnimatePresence>
-//         {isOpen && (
-//           <motion.div
-//             initial={{ opacity: 0 }}
-//             animate={{ opacity: 0.4 }}
-//             exit={{ opacity: 0 }}
-//             transition={{ duration: 0.25 }}
-//             className="fixed inset-0 bg-black backdrop-blur-sm z-40 md:hidden"
-//             onClick={() => setOpen(false)}
-//           />
-//         )}
-//       </AnimatePresence>
-
-//       {/* SIDEBAR */}
-// <motion.aside
-//   initial={false}
-//   animate={{
-//     x: isOpen ? 0 : -280,
-//   }}
-//   transition={{
-//     type: "spring",
-//     stiffness: 260,
-//     damping: 28,
-//   }}
-//   className="
-//     fixed md:static
-//     top-0 left-0 h-full w-64
-//     bg-[#22303e9a] backdrop-blur-md text-white p-6
-//     z-50
-// md:translate-x-0
-//   "
-// >
-//         <img src={logo} alt="Valora" className="h-10 mb-10 mt-8" />
-
-//         <nav className="flex flex-col gap-2">
-//           {sections.map((item) => (
-//             <button
-//               key={item.id}
-//               onClick={() => {
-//                 onChange(item.id);
-//                 setOpen(false);
-//               }}
-//               className={`
-//                 text-left font-medium px-3 py-2 rounded-md transition-all duration-300
-//                 ${
-//                   active === item.id
-//                     ? "bg-white/20"
-//                     : "hover:bg-white/10 hover:translate-x-1"
-//                 }
-//               `}
-//             >
-//               {item.label}
-//             </button>
-//           ))}
-//         </nav>
-//       </motion.aside>
-//     </>
-//   );
-// }
-
 import { motion, AnimatePresence } from "framer-motion";
 import type { Section } from "../../data/branding";
 import logo from "../../assets/logo.svg";
+import { Plus } from "lucide-react";
 import { useEffect, useState } from "react";
 
 interface Props {
@@ -167,6 +20,7 @@ export default function Sidebar({
   setOpen,
 }: Props) {
   const [isDesktop, setIsDesktop] = useState(false);
+  const [openItem, setOpenItem] = useState<string | null>(null);
 
   useEffect(() => {
     const check = () => setIsDesktop(window.innerWidth >= 768);
@@ -179,7 +33,7 @@ export default function Sidebar({
 
   return (
     <>
-      {/* OVERLAY (mobile only) */}
+      {/* OVERLAY */}
       <AnimatePresence>
         {!isDesktop && isOpen && (
           <motion.div
@@ -202,43 +56,86 @@ export default function Sidebar({
             initial={{ x: "-120%" }}
             animate={{ x: 0 }}
             exit={{ x: "-120%" }}
-            transition={{
-              type: "spring",
-              stiffness: 260,
-              damping: 28,
-            }}
-            className="
-    fixed md:static
-    top-0 left-0 h-full
-    w-[75%] max-w-70 md:w-64
-    bg-[#22303ec7] md:bg-[#22303e]
-    backdrop-blur-md md:backdrop-blur-none
-    text-[#F2F9FC] p-6 z-50 md:px-2
-  "
+            transition={{ type: "spring", stiffness: 260, damping: 28 }}
+            className="fixed md:static top-0 left-0 h-screen w-[75%] max-w-70 md:w-64 bg-[#22303ec7] md:bg-[#22303e] backdrop-blur-md md:backdrop-blur-none text-[#F2F9FC] p-6 z-50 md:px-2"
           >
             <img src={logo} alt="Valora" className="h-10 mb-10 mt-8 ml-2" />
 
             <nav className="flex flex-col gap-2">
-              {sections.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => {
-                    onChange(item.id);
-                    if (!isDesktop) setOpen(false);
-                  }}
-                  className={`
-                    text-left font-medium md:px-6 px-4 py-3 rounded-md
-                    transition-all duration-200
-                    ${
-                      active === item.id
-                        ? "bg-[#ffffff23]"
-                        : "hover:bg-white/10 hover:translate-x-1"
-                    }
-                  `}
-                >
-                  {item.label}
-                </button>
-              ))}
+              {sections.map((item) => {
+                const isActive = active === item.id;
+                const isOpenItem = openItem === item.id;
+
+                return (
+                  <div key={item.id}>
+                    {/* ITEM */}
+                    <div
+                      className={`
+                        w-full flex items-center justify-between
+                        md:px-6 px-4 py-3 rounded-md
+                        transition-all duration-200
+                        ${
+                          isActive
+                            ? "bg-[#ffffff23]"
+                            : "hover:bg-white/10"
+                        }
+                      `}
+                    >
+                      {/* TEXTO (NAVEGAÇÃO) */}
+                      <button
+                        onClick={() => {
+                          onChange(item.id);
+                          if (!isDesktop) setOpen(false);
+                        }}
+                        className="flex-1 text-left font-medium"
+                      >
+                        {item.label}
+                      </button>
+
+                      {/* ÍCONE (EXPANSÃO) */}
+                      {item.children && (
+                        <motion.button
+                          onClick={(e) => {
+                            e.stopPropagation(); 
+                            setOpenItem(isOpenItem ? null : item.id);
+                          }}
+                          animate={{ rotate: isOpenItem ? 45 : 0 }}
+                          transition={{ duration: 0.2 }}
+                          className="ml-2 flex items-center justify-center"
+                        >
+                          <Plus size={16} />
+                        </motion.button>
+                      )}
+                    </div>
+
+                    {/* SUBITENS */}
+                    <AnimatePresence>
+                      {item.children && isOpenItem && (
+                        <motion.div
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: "auto" }}
+                          exit={{ opacity: 0, height: 0 }}
+                          transition={{ duration: 0.25 }}
+                          className="ml-6 mt-2 flex flex-col gap-1 overflow-hidden"
+                        >
+                          {item.children.map((child) => (
+                            <button
+                              key={child.id}
+                              onClick={() => {
+                                onChange(item.id);
+                                if (!isDesktop) setOpen(false);
+                              }}
+                              className="text-sm text-white/70 hover:text-white transition text-left"
+                            >
+                              {child.label}
+                            </button>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                );
+              })}
             </nav>
           </motion.aside>
         )}

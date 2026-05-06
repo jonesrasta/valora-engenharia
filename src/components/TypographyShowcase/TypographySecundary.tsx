@@ -33,7 +33,7 @@ export default function TypographyShowcase() {
               </p> */}
             </div>
             {/* Big ABC */}
-            <h2 className="text-[150px] font-bold text-[#26323f] leading-none pl-4">
+            <h2 className="text-[140px] font-bold text-[#26323f] leading-none pl-4">
               Abc
             </h2>
           </div>

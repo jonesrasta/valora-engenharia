@@ -1,0 +1,30 @@
+import React from "react";
+
+const Footer: React.FC = () => {
+  return (
+    <footer className="w-full bg-[#22303e] border-t-[0.1px] border-[#f9805836] -mt-4 backdrop-blur-md text-white shadow-lg">
+      <div className="max-w-7xl mx-auto px-6 py-3.5 flex flex-col md:flex-row items-center justify-between gap-2">
+        
+        {/* Left */}
+        <p className="text-xs md:text-sm text-white">
+          © {new Date().getFullYear()} Todos os direitos reservados.
+        </p>
+
+        {/* Right */}
+        <p className="text-xs md:text-sm text-white">
+          Desenvolvido por {" "}
+          <a
+            href="https://www.livitycreative.com.br"
+            target="_blank"
+            className="text-white font-bold hover:text-[#F98058] transition-colors"
+          >
+            Livity Creative
+          </a>
+        </p>
+
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

@@ -59,7 +59,7 @@ import { motion } from "framer-motion";
 
 export default function TypographyShowcase() {
   return (
-    <div className="w-full min-h-screen flex items-center justify-center p-5 md:p-12">
+    <div className="w-full min-h-screen flex items-center justify-center p-6 md:p-12">
       <div className="w-full max-w-300">
         {/* MOBILE LAYOUT (EXATO DO DESIGN) */}
         <div className="flex flex-col md:hidden">
@@ -89,7 +89,7 @@ export default function TypographyShowcase() {
               </p>
             </div>
             {/* Big ABC */}
-            <h2 className="text-[110px] font-bold text-[#26323f] leading-none">
+            <h2 className="text-[100px] font-bold text-[#26323f] leading-none">
               Abc
             </h2>
           </div>

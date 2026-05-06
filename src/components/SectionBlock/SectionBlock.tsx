@@ -48,7 +48,7 @@ export default function SectionBlock({
             },
           }}
           className={`
-            text-[23px] md:text-4xl font-semibold mb-6 pt-8 md:py-6 py-3.5
+            text-xl md:text-4xl font-semibold mb-6 pt-8 md:py-6 py-3.5
             ${titleClassName}
           `}
         >

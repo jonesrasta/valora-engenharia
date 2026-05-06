@@ -129,7 +129,6 @@
 //     </div>
 //   );
 // }
-
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import type { Slide } from "../../data/branding";
@@ -142,19 +141,24 @@ interface Props {
 export default function Carousel({ slides }: Props) {
   const [index, setIndex] = useState(0);
 
+  if (!slides || slides.length === 0) return null;
+
+  const safeIndex = index >= slides.length ? 0 : index;
+  const current = slides[safeIndex];
+
+  if (!current) return null;
+
   const prev = () =>
     setIndex((i) => (i === 0 ? slides.length - 1 : i - 1));
 
   const next = () =>
     setIndex((i) => (i === slides.length - 1 ? 0 : i + 1));
 
-  const current = slides[index];
-
   return (
     <div className="relative w-full h-screen overflow-x-hidden md:h-200 md:rounded-2xl md:overflow-hidden">
       <AnimatePresence mode="wait">
         <motion.div
-          key={index}
+          key={safeIndex}
           className="absolute inset-0"
           initial={{ opacity: 0, scale: 1.02 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -164,6 +168,7 @@ export default function Carousel({ slides }: Props) {
           {current.type === "image" ? (
             <img
               src={current.src}
+              alt=""
               className="w-full h-full object-cover"
             />
           ) : (
@@ -174,7 +179,6 @@ export default function Carousel({ slides }: Props) {
         </motion.div>
       </AnimatePresence>
 
-      {/* CONTROLES (BOTTOM RIGHT) */}
       <div className="md:absolute fixed bottom-6 right-6 flex gap-2 z-20">
         <button
           onClick={prev}

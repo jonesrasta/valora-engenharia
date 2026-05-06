@@ -4,13 +4,13 @@
    Design Tokens (Valora)
 ========================= */
 :root {
-  --color-bg: #0b0f19;
-  --color-text: #0a1833;
+  --color-bg: #22303E;
+  /* --color-text: #0a1833;
   --color-muted: #22303e;
   --color-border: #22303e;
 
   --color-primary: #020617;
-  --color-accent: #f59e0b;
+  --color-accent: #f59e0b; */
 
   --font-sans: "NeueMetana", sans-serif;
 }
@@ -35,7 +35,7 @@ body {
   margin: 0;
   font-family: "NeueMetana", sans-serif !important;
   background: var(--color-bg);
-  color: var(--color-text);
+  /* color: var(--color-text); */
   overflow-x: clip;
 }
 
