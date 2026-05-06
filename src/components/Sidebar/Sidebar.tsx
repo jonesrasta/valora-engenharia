@@ -224,7 +224,7 @@ export default function Sidebar({
               bg-[#22303ec7] md:bg-[#22303e]
               backdrop-blur-md md:backdrop-blur-none
               text-[#F2F9FC]
-              p-6 z-50 md:z-40 md:px-2
+              p-4 md:p-6 z-50 md:z-40 md:px-2
             "
           >
             <img src={logo} alt="Valora" className="h-10 mb-10 mt-8 ml-2" />
@@ -272,7 +272,7 @@ export default function Sidebar({
                           }}
                           animate={{ rotate: isOpenItem ? 45 : 0 }}
                           transition={{ duration: 0.25 }}
-                          className="ml-2 flex items-center justify-center"
+                          className="ml-2 flex items-center justify-center bg-[#79797948]/80 rounded-full w-6 h-6"
                         >
                           <Plus size={18} />
                         </motion.button>

@@ -57,7 +57,7 @@ export default function ColorPalette() {
   return (
     <div className="w-full p-4 md:p-10 ">
       
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:mt-24 py-24 md:py-4 mb-6">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:mt-24 py-24 md:py-4 mb-2">
 
         {colors.map((color, index) => {
           const isFull = color.span === 4;

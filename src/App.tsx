@@ -69,7 +69,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-zinc-200 text-zinc-900 flex flex-col">
+    <div className="min-h-screen bg-zinc-200 flex flex-col">
       <Header isOpen={isOpen} setOpen={setOpen} />
 
       <div className="flex flex-1 overflow-x-hidden">
