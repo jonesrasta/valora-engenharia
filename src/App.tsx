@@ -69,10 +69,10 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-zinc-200 flex flex-col">
+    <div className="min-h-screen bg-zinc-200 flex flex-col overflow-x-hidden">
       <Header isOpen={isOpen} setOpen={setOpen} />
 
-      <div className="flex flex-1 overflow-x-hidden">
+      <div className="flex flex-1 overflow-hidden">
         <Sidebar
           sections={sections}
           active={active}
@@ -81,7 +81,7 @@ export default function App() {
           setOpen={setOpen}
         />
 
-        <main className="flex-1 flex items-center justify-center md:p-8">
+        <main className="flex-1 flex items-center justify-center md:p-8 overflow-y-auto">
           <div className="w-full max-w-6xl">
             <Carousel slides={slides} onNext={next} onPrev={prev} />
           </div>

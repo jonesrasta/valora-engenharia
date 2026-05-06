@@ -55,40 +55,33 @@ const colors: Color[] = [
 
 export default function ColorPalette() {
   return (
-    <div className="w-full p-4 md:p-10 ">
-      
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:mt-24 py-24 md:py-4 mb-2">
+    <div className="w-full p-4 md:p-10">
+      <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-fr gap-3 mt-24 py-8 md:py-10 mb-2">
+        {colors.map((color) => (
+          <motion.div
+            key={color.name}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            className={`
+          rounded-3xl p-6 flex flex-col justify-between
+          ${color.text || "text-[#22303E]"}
+          ${color.span === 4 ? "col-span-2 md:col-span-4" : ""}
+          min-h-50 md:min-h-60
+        `}
+            style={{ backgroundColor: color.bg }}
+          >
+            <span className="text-sm md:text-base font-bold tracking-wide">
+              {color.name}
+            </span>
 
-        {colors.map((color, index) => {
-          const isFull = color.span === 4;
-
-          return (
-            <motion.div
-              key={color.name}
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className={`
-                rounded-3xl p-6 flex flex-col justify-between
-                ${color.text || "text-[#22303E]"}
-
-                ${isFull ? "col-span-2 md:col-span-4" : ""}
-              `}
-              style={{ backgroundColor: color.bg, minHeight: 220 }}
-            >
-              <span className="text-sm md:text-base font-bold tracking-wide">
-                {color.name}
-              </span>
-
-              <div className="text-xs md:text-sm leading-relaxed">
-                <p>{color.hex}</p>
-                <p>{color.rgb}</p>
-                <p>{color.cmyk}</p>
-              </div>
-            </motion.div>
-          );
-        })}
-
+            <div className="text-xs md:text-sm leading-relaxed">
+              <p>{color.hex}</p>
+              <p>{color.rgb}</p>
+              <p>{color.cmyk}</p>
+            </div>
+          </motion.div>
+        ))}
       </div>
     </div>
   );

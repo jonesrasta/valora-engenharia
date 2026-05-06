@@ -4,13 +4,36 @@ import type { ReactNode } from "react";
 interface Props {
   title?: string;
   texts?: string[];
-
   className?: string;
   titleClassName?: string;
   textClassName?: string;
-
   children?: ReactNode;
 }
+
+const container = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 20, filter: "blur(2.5px)" },
+  visible: {
+    opacity: 1,
+    y: 0,
+    filter: "blur(0px)",
+    transition: { duration: 0.4 },
+  },
+};
+
+const fade = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.4 } },
+};
 
 export default function SectionBlock({
   title,
@@ -24,29 +47,13 @@ export default function SectionBlock({
     <motion.section
       initial="hidden"
       animate="visible"
-      variants={{
-        hidden: {},
-        visible: {
-          transition: {
-            staggerChildren: 0.15,
-            delayChildren: 0.2,
-          },
-        },
-      }}
-      className={`w-full max-w-4xl py-10 p-3 text-[#22303E] ${className}`}
+      variants={container}
+      className={`w-full max-w-4xl px-3 py-10 text-[#22303E] ${className}`}
     >
       {/* TITLE */}
       {title && (
         <motion.h2
-          variants={{
-            hidden: { opacity: 0, y: 20, filter: "blur(2.5px)" },
-            visible: {
-              opacity: 1,
-              y: 0,
-              filter: "blur(0px)",
-              transition: { duration: 0.4 },
-            },
-          }}
+          variants={item}
           className={`
             text-xl md:text-4xl font-semibold mb-6 pt-8 md:py-6 py-3.5
             ${titleClassName}
@@ -66,18 +73,7 @@ export default function SectionBlock({
           `}
         >
           {texts.map((text, i) => (
-            <motion.p
-              key={i}
-              variants={{
-                hidden: { opacity: 0, y: 20, filter: "blur(2.5px)" },
-                visible: {
-                  opacity: 1,
-                  y: 0,
-                  filter: "blur(0px)",
-                  transition: { duration: 0.4 },
-                },
-              }}
-            >
+            <motion.p key={`${text}-${i}`} variants={item}>
               {text}
             </motion.p>
           ))}
@@ -86,13 +82,7 @@ export default function SectionBlock({
 
       {/* CUSTOM CONTENT */}
       {children && (
-        <motion.div
-          variants={{
-            hidden: { opacity: 0 },
-            visible: { opacity: 1, transition: { duration: 0.4 } },
-          }}
-          className="mt-6"
-        >
+        <motion.div variants={fade} className="mt-6">
           {children}
         </motion.div>
       )}
