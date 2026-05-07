@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 
 export default function TypographyShowcase() {
@@ -16,10 +15,11 @@ export default function TypographyShowcase() {
           </motion.h1>
 
           {/* Alphabet */}
-          <div className="text-[#22303e] text-2xl tracking-wide leading-relaxed mb-16 [&_p]:no-underline">
-            <p>abcdefghijklmnopqrstuvwxyz</p>
-            {/* <p>opqrstuvwxyz</p> */}
-            {/* <p>1234567890</p> */}
+          <div className="flex flex-col items-end text-[#22303e] text-3xl tracking-wide leading-6 mb-16 [&_p]:no-underline">
+            <p>abcdefghijklmn</p>
+            <p>
+              opqrstuvwxyz<span className="text-zinc-200">..</span>
+            </p>
           </div>
 
           {/* Regular / Bold */}
@@ -69,8 +69,9 @@ export default function TypographyShowcase() {
             transition={{ duration: 0.5 }}
             className="flex flex-col justify-between h-full"
           >
-            <div className="text-[#22303e] text-3xl tracking-wide leading-relaxed">
-              <p>abcdefghijklmnopqrstuvwxyz</p>
+            <div className="text-[#22303e] text-4xl tracking-wide leading-8">
+              <p>abcdefghijklmn</p>
+              <p>opqrstuvwxyz</p>
               {/* <p>opqrstuvwxyz</p> */}
               {/* <p>1234567890</p> */}
             </div>

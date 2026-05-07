@@ -4,10 +4,18 @@ import ColorPalette from "../components/ColorPalette/ColorPalette";
 import TypographyShowcase from "../components/TypographyShowcase/TypographyShowcase";
 import SectionBlock from "../components/SectionBlock/SectionBlock";
 import TypographySecundary from "../components/TypographyShowcase/TypographySecundary";
+import LogoShowcase from "../components/LogoShowcase/LogoShowcase";
 
 export type Slide =
-  | { type: "image"; src: string }
-  | { type: "component"; component: ReactNode };
+  | {
+      type: "image";
+      src: string;
+      mobileSrc?: string;
+    }
+  | {
+      type: "component";
+      component: ReactNode;
+    };
 
 export interface Section {
   id: string;
@@ -18,46 +26,6 @@ export interface Section {
     label: string;
   }[];
 }
-
-// export const sections: Section[] = [
-//   {
-//     id: "institucional",
-//     label: "Institucional",
-//     slides: [
-//       { type: "component", component: <Cover /> },
-//       {
-//         type: "component",
-//         component: (
-//           <SectionBlock className="my-20"
-//             title="Apresentação da Marca"
-//             texts={[
-//               "A Valora Engenharia nasce com o propósito de transformar projetos em valor real. Atuando com excelência técnica e visão estratégica, a empresa se destaca pela capacidade de unir engenharia, precisão e alto padrão em cada entrega.",
-
-//               "Mais do que construir, a Valora desenvolve soluções inteligentes e bem estruturadas, pensadas para atender às demandas de um mercado exigente, onde qualidade, confiança e atenção aos detalhes são indispensáveis.",
-
-//               "Com um posicionamento sólido e contemporâneo, a marca reflete sofisticação, segurança e credibilidade. Cada projeto é conduzido com rigor técnico e compromisso, garantindo resultados consistentes e duradouros.",
-
-//               "Valora Engenharia é sinônimo de construir com propósito, elevar padrões e entregar valor em cada detalhe.",
-//             ]}
-//           />
-//         ),
-//       },
-//       { type: "image", src: "/images/1.webp" },
-//       { type: "component", component: <ColorPalette /> },
-//       { type: "component", component: <TypographyShowcase /> },
-//       { type: "component", component: <TypographySecundary /> },
-//     ],
-//   },
-//   {
-//     id: "projetos",
-//     label: "Projetos",
-//     slides: [
-//       { type: "image", src: "/img/1.webp" },
-//       { type: "image", src: "/img/2.webp" },
-//     ],
-//   },
-// ];
-
 
 export const sections: Section[] = [
   {
@@ -73,21 +41,21 @@ export const sections: Section[] = [
       {
         type: "component",
         component: (
-         <SectionBlock className="my-16 px-4"
+          <SectionBlock
+            className="my-16 px-4"
             title="Apresentação da Marca"
             texts={[
-               "A Valora Engenharia nasce com o propósito de transformar projetos em valor real. Atuando com excelência técnica e visão estratégica, a empresa se destaca pela capacidade de unir engenharia, precisão e alto padrão em cada entrega.",
+              "A Valora Engenharia nasce com o propósito de transformar projetos em valor real. Atuando com excelência técnica e visão estratégica, a empresa se destaca pela capacidade de unir engenharia, precisão e alto padrão em cada entrega.",
 
               "Mais do que construir, a Valora desenvolve soluções inteligentes e bem estruturadas, pensadas para atender às demandas de um mercado exigente, onde qualidade, confiança e atenção aos detalhes são indispensáveis.",
 
-               "Com um posicionamento sólido e contemporâneo, a marca reflete sofisticação, segurança e credibilidade. Cada projeto é conduzido com rigor técnico e compromisso, garantindo resultados consistentes e duradouros.",
+              "Com um posicionamento sólido e contemporâneo, a marca reflete sofisticação, segurança e credibilidade. Cada projeto é conduzido com rigor técnico e compromisso, garantindo resultados consistentes e duradouros.",
 
               "Valora Engenharia é sinônimo de construir com propósito, elevar padrões e entregar valor em cada detalhe.",
             ]}
           />
         ),
       },
-       
     ],
   },
   {
@@ -95,157 +63,47 @@ export const sections: Section[] = [
     label: "Cores",
     slides: [{ type: "component", component: <ColorPalette /> }],
   },
-{
-  id: "tipografia",
-  label: "Tipografia",
-  children: [
-    { id: "tipografia-primaria", label: "Fonte Primária" },
-    { id: "tipografia-secundaria", label: "Fonte Secundária" },
-  ],
-  slides: [
-    { type: "component", component: <TypographyShowcase /> },
-    { type: "component", component: <TypographySecundary /> },
-  ],
-},
+  {
+    id: "tipografia",
+    label: "Tipografia",
+    children: [
+      { id: "tipografia-primaria", label: "Fonte Primária" },
+      { id: "tipografia-secundaria", label: "Fonte Secundária" },
+    ],
+    slides: [
+      { type: "component", component: <TypographyShowcase /> },
+      { type: "component", component: <TypographySecundary /> },
+    ],
+  },
   {
     id: "logo",
     label: "Logo",
     slides: [
-      { type: "image", src: "/images/1.webp" },
-      // depois você pode trocar por componente
+      { type: "component", component: <LogoShowcase /> },
+      {
+        type: "image",
+        src: "/images/7.webp",
+      },
+      {
+        type: "image",
+        src: "/images/8.webp",
+        mobileSrc: "/images/8-mobile.webp",
+      },
+    ],
+  },
+  {
+    id: "Mockups",
+    label: "Mockups",
+    slides: [
+      {
+        type: "image",
+        src: "/images/7.webp",
+      },
+      {
+        type: "image",
+        src: "/images/8.webp",
+        mobileSrc: "/images/8-mobile.webp",
+      },
     ],
   },
 ];
-
-
-
-
-// import type { ReactNode } from "react";
-// import Cover from "../components/Cover/Cover";
-// import ColorPalette from "../components/ColorPalette/ColorPalette";
-// import TypographyShowcase from "../components/TypographyShowcase/TypographyShowcase";
-// import SectionBlock from "../components/SectionBlock/SectionBlock";
-// import TypographySecundary from "../components/TypographyShowcase/TypographySecundary";
-// import SubSectionTitle from "../components/SubSectionTitle/SubSectionTitle";
-
-// export interface Slide {
-//   type: "image" | "component";
-//   src?: string;
-//   component?: ReactNode;
-// }
-
-// export interface Section {
-//   id: string;
-//   label: string;
-//   slides: Slide[];
-// }
-
-// // export const sections: Section[] = [
-// //   {
-// //     id: "institucional",
-// //     label: "Institucional",
-// //     slides: [
-// //       { type: "component", component: <Cover /> },
-// //       {
-// //         type: "component",
-// //         component: (
-// //           <SectionBlock className="my-20"
-// //             title="Apresentação da Marca"
-// //             texts={[
-// //               "A Valora Engenharia nasce com o propósito de transformar projetos em valor real. Atuando com excelência técnica e visão estratégica, a empresa se destaca pela capacidade de unir engenharia, precisão e alto padrão em cada entrega.",
-
-// //               "Mais do que construir, a Valora desenvolve soluções inteligentes e bem estruturadas, pensadas para atender às demandas de um mercado exigente, onde qualidade, confiança e atenção aos detalhes são indispensáveis.",
-
-// //               "Com um posicionamento sólido e contemporâneo, a marca reflete sofisticação, segurança e credibilidade. Cada projeto é conduzido com rigor técnico e compromisso, garantindo resultados consistentes e duradouros.",
-
-// //               "Valora Engenharia é sinônimo de construir com propósito, elevar padrões e entregar valor em cada detalhe.",
-// //             ]}
-// //           />
-// //         ),
-// //       },
-// //       { type: "image", src: "/images/1.webp" },
-// //       { type: "component", component: <ColorPalette /> },
-// //       { type: "component", component: <TypographyShowcase /> },
-// //       { type: "component", component: <TypographySecundary /> },
-// //     ],
-// //   },
-// //   {
-// //     id: "projetos",
-// //     label: "Projetos",
-// //     slides: [
-// //       { type: "image", src: "/img/1.webp" },
-// //       { type: "image", src: "/img/2.webp" },
-// //     ],
-// //   },
-// // ];
-
-
-// export const sections: Section[] = [
-//   {
-//     id: "capa",
-//     label: "Capa",
-//     slides: [{ type: "component", component: <Cover /> }],
-//   },
-//   {
-//     id: "apresentacao",
-//     label: "Apresentação",
-//     slides: [
-//       { type: "image", src: "/images/1.webp" },
-//       {
-//         type: "component",
-//         component: (
-//          <SectionBlock className="my-16 px-4"
-//              title="Apresentação da Marca"
-//             texts={[
-//                "A Valora Engenharia nasce com o propósito de transformar projetos em valor real. Atuando com excelência técnica e visão estratégica, a empresa se destaca pela capacidade de unir engenharia, precisão e alto padrão em cada entrega.",
-
-//               "Mais do que construir, a Valora desenvolve soluções inteligentes e bem estruturadas, pensadas para atender às demandas de um mercado exigente, onde qualidade, confiança e atenção aos detalhes são indispensáveis.",
-
-//                "Com um posicionamento sólido e contemporâneo, a marca reflete sofisticação, segurança e credibilidade. Cada projeto é conduzido com rigor técnico e compromisso, garantindo resultados consistentes e duradouros.",
-
-//               "Valora Engenharia é sinônimo de construir com propósito, elevar padrões e entregar valor em cada detalhe.",
-//             ]}
-//           />
-//         ),
-//       },
-       
-//     ],
-//   },
-//   {
-//     id: "cores",
-//     label: "Cores",
-//     slides: [{ type: "component", component: <ColorPalette /> }],
-//   },
-// {
-//   id: "tipografia",
-//   label: "Tipografia",
-//   slides: [
-//     {
-//       type: "component",
-//       component: (
-//         <div className="px-4 md:px-0">
-
-//           {/* FONTE PRIMÁRIA */}
-//           <SubSectionTitle title="Fonte Primária" />
-//           <TypographyShowcase />
-
-//           {/* FONTE SECUNDÁRIA */}
-//           <div className="mt-16">
-//             <SubSectionTitle title="Fonte Secundária" />
-//             <TypographySecundary />
-//           </div>
-
-//         </div>
-//       ),
-//     },
-//   ],
-// },
-//   {
-//     id: "logo",
-//     label: "Logo",
-//     slides: [
-//       { type: "image", src: "/images/1.webp" },
-//       // depois você pode trocar por componente
-//     ],
-//   },
-// ];
