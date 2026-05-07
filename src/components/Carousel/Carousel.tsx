@@ -45,7 +45,7 @@ export default function Carousel({
               <img
                 src={current.src}
                 alt=""
-                className="w-full h-full object-cover mt-16 md:rounded-3xl"
+                className="w-full h-full object-cover mt-16 md:mt-0 md:rounded-3xl"
               />
             </picture>
           ) : (

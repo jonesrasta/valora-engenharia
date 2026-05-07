@@ -106,7 +106,7 @@ export const sections: Section[] = [
         src: "/images/8.webp",
         mobileSrc: "/images/8-mobile.webp",
       },
-            {
+      {
         type: "image",
         src: "/images/10.webp",
         mobileSrc: "/images/10-mobile.webp",
@@ -115,9 +115,19 @@ export const sections: Section[] = [
         type: "image",
         src: "/images/11.webp",
       },
-            {
+      {
         type: "image",
         src: "/images/12.webp",
+      },
+      {
+        type: "image",
+        src: "/images/13.webp",
+        mobileSrc: "/images/13-mobile.webp",
+      },
+            {
+        type: "image",
+        src: "/images/14.webp",
+        mobileSrc: "/images/14-mobile.webp",
       },
     ],
   },
