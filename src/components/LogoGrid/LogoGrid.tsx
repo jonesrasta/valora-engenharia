@@ -1,3 +1,6 @@
+
+
+
 export default function LogoGrid() {
   return (
     <section className="w-full bg-[#f5f4f2]">
@@ -38,7 +41,7 @@ export default function LogoGrid() {
               <img
                 src="/white-logo.svg"
                 alt="Valora App"
-                className="w-14 md:w-20"
+                className="w-14 md:w-20 ml-3"
               />
             </div>
 
