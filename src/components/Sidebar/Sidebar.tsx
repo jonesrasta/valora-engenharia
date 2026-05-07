@@ -150,7 +150,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import type { Section } from "../../data/branding";
-import logo from "../../assets/logo.svg";
+import logo from "../../../public/logo.svg";
 import { Plus } from "lucide-react";
 import { useEffect, useState, useMemo } from "react";
 

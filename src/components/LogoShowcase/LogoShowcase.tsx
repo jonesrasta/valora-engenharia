@@ -7,17 +7,17 @@ interface LogoVariation {
 const logos: LogoVariation[] = [
   {
     bg: "bg-[#22303E]",
-    src: "/src/assets/logo.svg",
+    src: "/logo.svg",
     alt: "Valora Logo Dark",
   },
   {
     bg: "bg-[#F5825A]",
-    src: "/src/assets/logo-white.svg",
+    src: "/logo-white.svg",
     alt: "Valora Logo Orange",
   },
   {
     bg: "bg-[#020817]",
-    src: "/src/assets/logo.svg",
+    src: "/logo.svg",
     alt: "Valora Logo Black",
   },
 ];
