@@ -2,10 +2,16 @@ import type { ReactNode } from "react";
 import Cover from "../components/Cover/Cover";
 import ColorPalette from "../components/ColorPalette/ColorPalette";
 import TypographyShowcase from "../components/TypographyShowcase/TypographyShowcase";
-import SectionBlock from "../components/SectionBlock/SectionBlock";
+
 import TypographySecundary from "../components/TypographyShowcase/TypographySecundary";
 import LogoShowcase from "../components/LogoShowcase/LogoShowcase";
 import LogoGrid from "../components/LogoGrid/LogoGrid";
+import BrandEssence from "../components/BrandEssence/BrandEssence";
+import MissionVisionValues from "../components/MissionVisionValues/MissionVisionValues";
+import BrandConcept from "../components/BrandConcept/BrandConcept";
+import BrandPositioning from "../components/BrandPositioning/BrandPositioning";
+import BrandDifferentials from "../components/BrandDifferentials/BrandDifferentials";
+import BrandPresentation from "../components/BrandPresentation/BrandPresentation";
 
 export type Slide =
   | {
@@ -42,21 +48,28 @@ export const sections: Section[] = [
       {
         type: "component",
         component: (
-          <SectionBlock
-            className="my-16 px-4"
-            title="Apresentação da Marca"
-            texts={[
-              "A Valora Engenharia nasce com o propósito de transformar projetos em valor real. Atuando com excelência técnica e visão estratégica, a empresa se destaca pela capacidade de unir engenharia, precisão e alto padrão em cada entrega.",
-
-              "Mais do que construir, a Valora desenvolve soluções inteligentes e bem estruturadas, pensadas para atender às demandas de um mercado exigente, onde qualidade, confiança e atenção aos detalhes são indispensáveis.",
-
-              "Com um posicionamento sólido e contemporâneo, a marca reflete sofisticação, segurança e credibilidade. Cada projeto é conduzido com rigor técnico e compromisso, garantindo resultados consistentes e duradouros.",
-
-              "Valora Engenharia é sinônimo de construir com propósito, elevar padrões e entregar valor em cada detalhe.",
-            ]}
+          <BrandPresentation
           />
         ),
       },
+    ],
+  },
+    {
+    id: "Essência da Marca",
+    label: "Essência",
+    children: [
+      { id: "essencia-marca", label: "Essência da Marca" },
+      { id: "missao", label: "Missão Visão Valores" },
+      { id: "conceito", label: "Conceito da Marca" },
+      { id: "posicionamento", label: "Posicionamento" },
+      { id: "diferenciais", label: "Diferenciais" },
+    ],
+    slides: [
+      { type: "component", component: <BrandEssence /> },
+      { type: "component", component: <MissionVisionValues /> },
+      { type: "component", component: <BrandConcept /> },
+      { type: "component", component: <BrandPositioning /> },
+      { type: "component", component: <BrandDifferentials /> },
     ],
   },
   {

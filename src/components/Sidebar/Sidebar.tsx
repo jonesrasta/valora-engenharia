@@ -124,7 +124,7 @@ export default function Sidebar({
       flex items-center justify-center
       bg-[#79797948]/80
       rounded-full
-      w-6 h-6
+      w-7 h-7
       overflow-hidden
     "
                         >
