@@ -82,15 +82,15 @@ export const sections: Section[] = [
     slides: [
       { type: "component", component: <LogoGrid /> },
       { type: "component", component: <LogoShowcase /> },
-      {
-        type: "image",
-        src: "/images/7.webp",
-      },
-      {
-        type: "image",
-        src: "/images/8.webp",
-        mobileSrc: "/images/8-mobile.webp",
-      },
+      // {
+      //   type: "image",
+      //   src: "/images/7.webp",
+      // },
+      // {
+      //   type: "image",
+      //   src: "/images/8.webp",
+      //   mobileSrc: "/images/8-mobile.webp",
+      // },
     ],
   },
   {
@@ -105,6 +105,19 @@ export const sections: Section[] = [
         type: "image",
         src: "/images/8.webp",
         mobileSrc: "/images/8-mobile.webp",
+      },
+            {
+        type: "image",
+        src: "/images/10.webp",
+        mobileSrc: "/images/10-mobile.webp",
+      },
+      {
+        type: "image",
+        src: "/images/11.webp",
+      },
+            {
+        type: "image",
+        src: "/images/12.webp",
       },
     ],
   },
