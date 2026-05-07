@@ -2,7 +2,8 @@ import React from "react";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="w-full bg-[#22303e] z-40 border-t-[0.1px] border-[#f9805836] -mt-3 backdrop-blur-md text-white shadow-lg">
+    <footer className="w-full bg-[#22303e] z-40 -mt-3 backdrop-blur-md text-white shadow-lg">
+      <hr className="sm:mx-auto h-px border-t-0 bg-transparent bg-linear-to-r from-transparent via-[#f98058ce] to-transparent opacity-25" />
       <div className="max-w-7xl mx-auto px-6 py-3.5 flex flex-col md:flex-row items-center justify-between gap-2 mt-2">
         
         {/* Left */}

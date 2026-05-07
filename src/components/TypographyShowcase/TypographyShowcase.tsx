@@ -61,6 +61,7 @@ export default function TypographyShowcase() {
   return (
     <div className="w-full min-h-screen flex items-center justify-center p-6 md:p-12">
       <div className="w-full max-w-300">
+
         {/* MOBILE LAYOUT (EXATO DO DESIGN) */}
         <div className="flex flex-col md:hidden">
           <motion.h1
@@ -76,6 +77,7 @@ export default function TypographyShowcase() {
             <p>abcdefghijklmn</p>
             <p>
               opqrstuvwxyz<span className="text-zinc-200">..</span>
+              <p>1234567890</p>
             </p>
           </div>
 
@@ -105,7 +107,7 @@ export default function TypographyShowcase() {
             transition={{ duration: 0.5 }}
             className="flex flex-col justify-between h-full"
           >
-            <h1 className="text-6xl font-semibold text-[#22303e] mb-10">
+            <h1 className="text-[44px] font-semibold text-[#22303e] mb-10">
               Neue Metana
             </h1>
 
@@ -126,7 +128,7 @@ export default function TypographyShowcase() {
             transition={{ duration: 0.5 }}
             className="flex flex-col justify-between h-full"
           >
-            <div className="text-[#22303e] text-2xl tracking-wide leading-8">
+            <div className="text-[#22303e] text-3xl tracking-wide leading-8 mt-24">
               <p>abcdefghijklmn</p>
               <p>opqrstuvwxyz</p>
               <p>1234567890</p>

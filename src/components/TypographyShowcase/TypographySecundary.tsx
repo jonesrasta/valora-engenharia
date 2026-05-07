@@ -48,7 +48,7 @@ export default function TypographyShowcase() {
             transition={{ duration: 0.5 }}
             className="flex flex-col justify-between h-full"
           >
-            <h1 className="text-6xl font-semibold text-[#22303e] mb-10">
+            <h1 className="text-5xl font-semibold text-[#22303e] mb-10">
               Mortane
             </h1>
 
@@ -69,7 +69,7 @@ export default function TypographyShowcase() {
             transition={{ duration: 0.5 }}
             className="flex flex-col justify-between h-full"
           >
-            <div className="text-[#22303e] text-4xl tracking-wide leading-8">
+            <div className="text-[#22303e] text-5xl tracking-wide leading-10 mt-24">
               <p>abcdefghijklmn</p>
               <p>opqrstuvwxyz</p>
               {/* <p>opqrstuvwxyz</p> */}

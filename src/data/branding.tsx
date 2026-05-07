@@ -5,6 +5,7 @@ import TypographyShowcase from "../components/TypographyShowcase/TypographyShowc
 import SectionBlock from "../components/SectionBlock/SectionBlock";
 import TypographySecundary from "../components/TypographyShowcase/TypographySecundary";
 import LogoShowcase from "../components/LogoShowcase/LogoShowcase";
+import LogoGrid from "../components/LogoGrid/LogoGrid";
 
 export type Slide =
   | {
@@ -79,6 +80,7 @@ export const sections: Section[] = [
     id: "logo",
     label: "Logo",
     slides: [
+      { type: "component", component: <LogoGrid /> },
       { type: "component", component: <LogoShowcase /> },
       {
         type: "image",

@@ -24,7 +24,7 @@ const logos: LogoVariation[] = [
 
 export default function LogoShowcase() {
   return (
-    <section className="w-full overflow-hidden rounded-3xl">
+    <section className="w-full overflow-hidden md:rounded-3xl">
       <div className="flex flex-col mt-10 md:mt-0">
         {logos.map((logo, index) => (
           <div
