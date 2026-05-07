@@ -12,6 +12,10 @@ import BrandConcept from "../components/BrandConcept/BrandConcept";
 import BrandPositioning from "../components/BrandPositioning/BrandPositioning";
 import BrandDifferentials from "../components/BrandDifferentials/BrandDifferentials";
 import BrandPresentation from "../components/BrandPresentation/BrandPresentation";
+import LogoConcept from "../components/LogoConcept/LogoConcept";
+import LogoStructureConcept from "../components/LogoStructureConcept/LogoStructureConcept";
+import TypographyConcept from "../components/TypographyConcept/TypographyConcept";
+import ColorPaletteConcept from "../components/ColorPaletteConcept/ColorPaletteConcept";
 
 export type Slide =
   | {
@@ -72,38 +76,52 @@ export const sections: Section[] = [
       { type: "component", component: <BrandDifferentials /> },
     ],
   },
+  // {
+  //   id: "cores",
+  //   label: "Cores",
+  //   slides: [{ type: "component", component: <ColorPalette /> }],
+  // },
   {
     id: "cores",
     label: "Cores",
-    slides: [{ type: "component", component: <ColorPalette /> }],
+    children: [
+      { id: "conceito-cores", label: "Conceito de Cores" },
+      { id: "paleta-cores", label: "Paleta de Cores" },
+    ],
+    slides: [
+      { type: "component", component: <ColorPaletteConcept /> },
+      { type: "component", component: <ColorPalette /> },
+
+    ],
   },
   {
     id: "tipografia",
     label: "Tipografia",
     children: [
+      { id: "tipografia-uso", label: "Fontes" },
       { id: "tipografia-primaria", label: "Fonte Primária" },
       { id: "tipografia-secundaria", label: "Fonte Secundária" },
     ],
     slides: [
+      { type: "component", component: <TypographyConcept /> },
       { type: "component", component: <TypographyShowcase /> },
       { type: "component", component: <TypographySecundary /> },
     ],
   },
-  {
+      {
     id: "logo",
     label: "Logo",
+    children: [
+      { id: "conceito-logo", label: "Conceito" },
+      { id: "grid-logo", label: "Logo Grid" },
+      { id: "formas-logo", label: "Formas" },
+      { id: "logo-colors", label: "Cores" },
+    ],
     slides: [
+      { type: "component", component: <LogoConcept /> },
       { type: "component", component: <LogoGrid /> },
+      { type: "component", component: <LogoStructureConcept /> },
       { type: "component", component: <LogoShowcase /> },
-      // {
-      //   type: "image",
-      //   src: "/images/7.webp",
-      // },
-      // {
-      //   type: "image",
-      //   src: "/images/8.webp",
-      //   mobileSrc: "/images/8-mobile.webp",
-      // },
     ],
   },
   {
