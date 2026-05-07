@@ -6,17 +6,16 @@ export default function BrandConcept() {
   ];
 
   return (
-    <section className="w-full min-h-screen flex items-center justify-center px-2 py-10 pt-24 md:pt-0 md:-mt-8">
+    <section className="w-full min-h-screen flex items-center justify-center px-2 pt-24 md:pt-0 md:-mt-8">
       <div className="w-full max-w-4xl px-1.5 py-10 text-[#26323f]">
 
         {/* CONCEITO */}
-        <div className="mb-16">
+        <div className="mb-10">
           <h2
             className="
               text-xl md:text-4xl
               font-semibold
               tracking-tight
-              mb-6
               text-[#22303e]
             "
           >
@@ -41,13 +40,12 @@ export default function BrandConcept() {
         </div>
 
         {/* ORIGEM */}
-        <div className="mb-16">
+        <div className="mb-10">
           <h2
             className="
               text-xl md:text-4xl
               font-semibold
               tracking-tight
-              mb-6
               text-[#22303e]
             "
           >
@@ -111,7 +109,7 @@ export default function BrandConcept() {
             A Valora Engenharia se apresenta como uma marca:
           </p>
 
-          <div className="space-y-5">
+          <div className="space-y-2">
             {personalityItems.map((item, index) => (
               <div
                 key={index}

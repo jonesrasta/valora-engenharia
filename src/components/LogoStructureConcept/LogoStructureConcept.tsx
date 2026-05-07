@@ -37,7 +37,7 @@ export default function LogoStructureConcept() {
     <section className="w-full min-h-screen flex items-center justify-center px-2 py-10 pt-24 md:pt-0 md:-mt-8">
       <div className="w-full max-w-4xl px-1.5 py-10 text-[#26323f]">
 
-        <div className="space-y-20">
+        <div className="space-y-10">
 
           {/* IDEIA DAS FORMAS */}
           <motion.div
@@ -145,7 +145,7 @@ export default function LogoStructureConcept() {
                 leading-relaxed
                 tracking-wide
                 text-[#2e3c48]
-                mb-10
+                mb-8
                 max-w-4xl
               "
             >

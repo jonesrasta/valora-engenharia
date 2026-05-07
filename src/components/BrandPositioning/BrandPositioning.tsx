@@ -26,7 +26,7 @@ export default function BrandPositioning() {
   return (
     <section className="w-full min-h-screen flex items-center justify-center px-2 py-10 pt-24 md:pt-0 md:-mt-8">
       <div className="w-full max-w-4xl px-1.5 py-10 text-[#26323f]">
-        <div className="space-y-20">
+        <div className="space-y-10">
           
           {/* POSICIONAMENTO */}
           <motion.div
@@ -66,7 +66,7 @@ export default function BrandPositioning() {
               Seu público é composto por:
             </p>
 
-            <div className="space-y-5">
+            <div className="space-y-2">
               {audience.map((item, index) => (
                 <motion.div
                   key={index}

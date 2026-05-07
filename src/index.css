@@ -29,12 +29,17 @@ body,
   width: 100%;
 }
 
+html {
+  overflow-x: hidden;
+  scrollbar-gutter: stable;
+}
+
 body {
   margin: 0;
   font-family: "NeueMetana", sans-serif !important;
   background: var(--color-bg);
   color: var(--color-text);
-  overflow-x: clip;
+  overflow-x: hidden;
 }
 
 /* =========================
@@ -76,6 +81,10 @@ p {
   border-radius: 999px;
 }
 
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 @font-face {
   font-family: "NeueMetana";

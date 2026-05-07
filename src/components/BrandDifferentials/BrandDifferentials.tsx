@@ -36,7 +36,7 @@ export default function BrandDifferentials() {
   return (
     <section className="w-full min-h-screen flex items-center justify-center px-2 py-10 pt-24 md:pt-0 md:-mt-8">
       <div className="w-full max-w-4xl px-1.5 py-10 text-[#26323f]">
-        <div className="space-y-24">
+        <div className="space-y-10">
 
           {/* DIFERENCIAIS */}
           <motion.div
@@ -54,7 +54,7 @@ export default function BrandDifferentials() {
               A Valora Engenharia se destaca por:
             </p>
 
-            <div className="space-y-5">
+            <div className="space-y-2">
               {diferencials.map((item, index) => (
                 <motion.div
                   key={index}
@@ -94,7 +94,7 @@ export default function BrandDifferentials() {
               A Valora Engenharia busca ser reconhecida como uma marca:
             </p>
 
-            <div className="space-y-5">
+            <div className="space-y-2">
               {perception.map((item, index) => (
                 <motion.div
                   key={index}

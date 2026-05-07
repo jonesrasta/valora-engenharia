@@ -8,17 +8,16 @@ export default function BrandEssence() {
   ];
 
   return (
-    <section className="w-full min-h-screen flex items-center justify-center px-2 py-10 pt-24 md:pt-0 md:-mt-8">
+    <section className="w-full min-h-screen flex items-center justify-center px-2 pt-24 md:pt-0 md:-mt-8">
       <div className="w-full max-w-4xl px-1.5 py-10 text-[#26323f]">
 
         {/* ESSÊNCIA */}
-        <div className="mb-14">
+        <div className="mb-10">
           <h2
             className="
               text-xl md:text-4xl
               font-semibold
               tracking-tight
-              mb-10
             "
           >
             Essência da Marca
@@ -39,13 +38,12 @@ export default function BrandEssence() {
         </div>
 
         {/* PROPÓSITO */}
-        <div className="mb-14">
+        <div className="mb-10">
           <h2
             className="
               text-xl md:text-4xl
               font-semibold
               tracking-tight
-              mb-5
             "
           >
             Propósito
@@ -73,7 +71,6 @@ export default function BrandEssence() {
               text-xl md:text-4xl
               font-semibold
               tracking-tight
-              mb-5
             "
           >
             Personalidade da Marca
@@ -90,7 +87,7 @@ export default function BrandEssence() {
             A Valora Engenharia se apresenta como uma marca:
           </p>
 
-          <div className="space-y-5">
+          <div className="space-y-3">
             {personality.map((item, index) => (
               <div
                 key={index}

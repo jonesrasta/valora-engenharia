@@ -2,7 +2,6 @@ import type { ReactNode } from "react";
 import Cover from "../components/Cover/Cover";
 import ColorPalette from "../components/ColorPalette/ColorPalette";
 import TypographyShowcase from "../components/TypographyShowcase/TypographyShowcase";
-
 import TypographySecundary from "../components/TypographyShowcase/TypographySecundary";
 import LogoShowcase from "../components/LogoShowcase/LogoShowcase";
 import LogoGrid from "../components/LogoGrid/LogoGrid";
@@ -47,18 +46,16 @@ export const sections: Section[] = [
   {
     id: "apresentacao",
     label: "Apresentação",
+    children: [
+      { id: "aplicacao-urbana", label: "Aplicação Urbana" },
+      { id: "apresentacao-marca", label: "Apresentação Marca" },
+    ],
     slides: [
       { type: "image", src: "/images/1.webp" },
-      {
-        type: "component",
-        component: (
-          <BrandPresentation
-          />
-        ),
-      },
+      { type: "component", component: <BrandPresentation /> },
     ],
   },
-    {
+  {
     id: "Essência da Marca",
     label: "Essência",
     children: [
@@ -76,11 +73,6 @@ export const sections: Section[] = [
       { type: "component", component: <BrandDifferentials /> },
     ],
   },
-  // {
-  //   id: "cores",
-  //   label: "Cores",
-  //   slides: [{ type: "component", component: <ColorPalette /> }],
-  // },
   {
     id: "cores",
     label: "Cores",
@@ -91,14 +83,13 @@ export const sections: Section[] = [
     slides: [
       { type: "component", component: <ColorPaletteConcept /> },
       { type: "component", component: <ColorPalette /> },
-
     ],
   },
   {
     id: "tipografia",
     label: "Tipografia",
     children: [
-      { id: "tipografia-uso", label: "Fontes" },
+      { id: "tipografia-uso", label: "Uso tipográfico" },
       { id: "tipografia-primaria", label: "Fonte Primária" },
       { id: "tipografia-secundaria", label: "Fonte Secundária" },
     ],
@@ -108,14 +99,14 @@ export const sections: Section[] = [
       { type: "component", component: <TypographySecundary /> },
     ],
   },
-      {
+  {
     id: "logo",
-    label: "Logo",
+    label: "Logotipo",
     children: [
-      { id: "conceito-logo", label: "Conceito" },
-      { id: "grid-logo", label: "Logo Grid" },
-      { id: "formas-logo", label: "Formas" },
-      { id: "logo-colors", label: "Cores" },
+      { id: "conceito-logo", label: "Conceito Logotipo" },
+      { id: "grid-logo", label: "Logotipo Grid" },
+      { id: "formas-logo", label: "Formas Logotipo" },
+      { id: "logo-colors", label: "Cores aplicadas" },
     ],
     slides: [
       { type: "component", component: <LogoConcept /> },
@@ -155,7 +146,7 @@ export const sections: Section[] = [
         src: "/images/13.webp",
         mobileSrc: "/images/13-mobile.webp",
       },
-            {
+      {
         type: "image",
         src: "/images/14.webp",
         mobileSrc: "/images/14-mobile.webp",

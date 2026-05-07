@@ -24,20 +24,24 @@ export default function Sidebar({
 
   useEffect(() => {
     const check = () => setIsDesktop(window.innerWidth >= 768);
+
     check();
 
     window.addEventListener("resize", check);
+
     return () => window.removeEventListener("resize", check);
   }, []);
 
   const shouldShow = isDesktop || isOpen;
 
   const derivedOpenItem = useMemo(() => {
+    if (openItem) return openItem;
+
     const parent = sections.find((section) =>
       section.children?.some((child) => child.id === active),
     );
 
-    return parent?.id ?? openItem;
+    return parent?.id ?? null;
   }, [active, sections, openItem]);
 
   return (
@@ -83,18 +87,20 @@ export default function Sidebar({
                   active === item.id ||
                   item.children?.some((child) => child.id === active);
 
-                const isOpenItem = derivedOpenItem === item.id;
+                const isOpenItem =
+                  openItem === item.id ||
+                  (openItem === null && derivedOpenItem === item.id);
 
                 return (
                   <div key={item.id}>
-                    {/* ITEM */}
                     <div
                       className={`
-                        flex items-center justify-between
-                        md:px-6 px-4 py-3 rounded-md
-                        transition-all duration-200
-                        ${isActive ? "bg-[#ffffff23]" : "hover:bg-white/10"}
-                      `}
+          relative z-0
+          flex items-center justify-between
+          md:px-6 px-4 py-3 rounded-md
+          transition-all duration-200
+          ${isActive ? "bg-[#ffffff0e]" : "hover:bg-white/10"}
+        `}
                     >
                       {/* TEXTO */}
                       <button
@@ -113,47 +119,33 @@ export default function Sidebar({
 
                       {/* ÍCONE */}
                       {item.children && (
-                        <motion.button
+                        <button
+                          type="button"
                           onClick={(e) => {
                             e.stopPropagation();
                             setOpenItem(isOpenItem ? null : item.id);
                           }}
                           className="
       ml-2
-      relative
       flex items-center justify-center
-      bg-[#79797948]/80
+      bg-[#79797921]
       rounded-full
       w-7 h-7
-      overflow-hidden
+      shrink-0
     "
                         >
-                          <AnimatePresence mode="wait">
+                          <motion.div
+                            animate={{ rotate: isOpenItem ? 180 : 0 }}
+                            transition={{ duration: 0.2 }}
+                            className="flex items-center justify-center"
+                          >
                             {isOpenItem ? (
-                              <motion.div
-                                key="minus"
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                exit={{ opacity: 0 }}
-                                transition={{ duration: 0.15 }}
-                                className="absolute"
-                              >
-                                <Minus size={18} />
-                              </motion.div>
+                              <Minus size={18} />
                             ) : (
-                              <motion.div
-                                key="plus"
-                                initial={{ opacity: 0 }}
-                                animate={{ opacity: 1 }}
-                                exit={{ opacity: 0 }}
-                                transition={{ duration: 0.15 }}
-                                className="absolute"
-                              >
-                                <Plus size={18} />
-                              </motion.div>
+                              <Plus size={18} />
                             )}
-                          </AnimatePresence>
-                        </motion.button>
+                          </motion.div>
+                        </button>
                       )}
                     </div>
 
