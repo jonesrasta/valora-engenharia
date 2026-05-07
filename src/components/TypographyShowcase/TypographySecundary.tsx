@@ -56,9 +56,6 @@ export default function TypographyShowcase() {
               <p className="text-3xl text-[#22303e] font-normal leading-tight">
                 Regular
               </p>
-              {/* <p className="text-3xl text-[#22303e] font-bold leading-tight">
-                Bold
-              </p> */}
             </div>
           </motion.div>
 
@@ -72,8 +69,6 @@ export default function TypographyShowcase() {
             <div className="text-[#22303e] text-5xl tracking-wide leading-10 mt-24">
               <p>abcdefghijklmn</p>
               <p>opqrstuvwxyz</p>
-              {/* <p>opqrstuvwxyz</p> */}
-              {/* <p>1234567890</p> */}
             </div>
 
             <div className="mt-40 md:-ml-24">
