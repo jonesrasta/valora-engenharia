@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import type { Section } from "../../data/branding";
+import type { Section } from "../../../data/branding";
 import { Minus, Plus } from "lucide-react";
 import { useEffect, useState, useMemo } from "react";
 
