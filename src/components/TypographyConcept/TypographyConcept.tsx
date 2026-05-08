@@ -49,7 +49,7 @@ export default function TypographySection() {
             className="
             max-w-4xl
             text-[17px] md:text-lg
-            leading-[1.35]
+            leading-relaxed
             tracking-wide
             mb-16
           "

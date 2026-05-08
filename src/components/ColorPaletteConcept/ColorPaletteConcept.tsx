@@ -60,7 +60,7 @@ export default function ColorPaletteConcept() {
             font-semibold
             tracking-tight
             mb-8 md:mb-10
-            leading-none
+            leading-relaxed
           "
         >
           Paleta de Cores
@@ -79,7 +79,7 @@ export default function ColorPaletteConcept() {
             className="
               max-w-230
               text-[17px] md:text-lg
-              leading-[1.18]
+              leading-relaxed
               tracking-wide
             "
           >
@@ -92,7 +92,7 @@ export default function ColorPaletteConcept() {
             className="
               max-w-230
               text-[17px] md:text-lg
-              leading-[1.18]
+              leading-relaxed
               tracking-wide
             "
           >
@@ -160,7 +160,7 @@ export default function ColorPaletteConcept() {
               <p
                 className="
                   text-[17px] md:text-lg
-                  leading-[1.18]
+                  leading-relaxed
                   tracking-wide
                   text-[#2e3c48]
                   md:max-w-155
