@@ -6,7 +6,7 @@ export default function Cover() {
   <img
     src={logo}
     alt="Valora"
-    className="w-68 h-auto md:w-100 md:-mt-16"
+    className="w-68 h-auto md:w-120 md:-mt-16"
     // opacity-80 hover:scale-105 transition
   />
 </div>

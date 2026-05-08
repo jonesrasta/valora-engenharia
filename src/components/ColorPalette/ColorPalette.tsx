@@ -7,7 +7,7 @@ interface Color {
   cmyk: string;
   bg: string;
   text?: string;
-  span?: number; // pra controlar largura
+  span?: number;
 }
 
 const colors: Color[] = [
