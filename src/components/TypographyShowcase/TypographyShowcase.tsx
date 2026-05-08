@@ -1,11 +1,9 @@
-
 import { motion } from "framer-motion";
 
 export default function TypographyShowcase() {
   return (
     <div className="w-full min-h-screen flex items-center justify-center p-6 md:p-12">
       <div className="w-full max-w-300">
-
         {/* MOBILE LAYOUT (EXATO DO DESIGN) */}
         <div className="flex flex-col md:hidden">
           <motion.h1

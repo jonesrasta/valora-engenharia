@@ -21,6 +21,7 @@ const fadeUp = {
 const sections = [
   {
     title: "Conceito do Logotipo",
+
     text: `O logotipo da Valora Engenharia foi desenvolvido a partir de uma construção geométrica precisa, refletindo o rigor técnico e a organização que fazem parte da essência da marca.
 
 Sua estrutura segue uma lógica baseada em alinhamentos e proporções bem definidas, evidenciando o cuidado com cada detalhe e o compromisso com a excelência em engenharia.`,
@@ -39,7 +40,6 @@ export default function LogoConcept() {
   return (
     <section className="w-full min-h-screen flex items-center justify-center px-2 py-10 pt-24 md:pt-0 md:-mt-8">
       <div className="w-full max-w-4xl px-1.5 py-10 text-[#26323f]">
-        
         <div className="space-y-10">
           {sections.map((section, index) => (
             <motion.div
@@ -52,10 +52,9 @@ export default function LogoConcept() {
             >
               {/* HEADER */}
               <div className="flex items-center gap-4 mb-4">
-
                 <h2
                   className="
-                    text-xl md:text-4xl
+                    text-2xl md:text-3xl
                     font-semibold
                     tracking-[-0.03em]
                     leading-none
@@ -68,23 +67,31 @@ export default function LogoConcept() {
               {/* TEXT */}
               <div className="flex flex-col gap-6">
                 {section.text.split("\n\n").map((paragraph, i) => (
-                  <motion.p
+                  <motion.div
                     key={i}
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
                     custom={0.1 * (i + 1)}
                     variants={fadeUp}
-                    className="
-                      text-[17px] md:text-lg
-                      leading-relaxed
-                      tracking-wide
-                      text-[#2e3c48]
-                      max-w-4xl
-                    "
                   >
-                    {paragraph}
-                  </motion.p>
+                    <p
+                      className="
+          text-[17px] md:text-lg
+          leading-relaxed
+          tracking-wide
+          text-[#2e3c48]
+          max-w-4xl
+        "
+                    >
+                      {paragraph}
+                    </p>
+
+                    {/* LINE */}
+                    {index === 0 && i === 1 && (
+                      <div className="mb-10 border-b border-[#26323f]/10 pb-8"></div>
+                    )}
+                  </motion.div>
                 ))}
               </div>
             </motion.div>

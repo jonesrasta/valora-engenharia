@@ -4,7 +4,6 @@ export default function LogoGrid() {
   return (
     <section className="w-full bg-[#f5f4f2] overflow-hidden">
       <div className="grid grid-cols-1 md:grid-cols-2">
-        
         {/* TOP */}
         <motion.div
           initial={{ opacity: 0, y: 60 }}
@@ -71,7 +70,6 @@ export default function LogoGrid() {
           className="bg-[#22303e] h-80 md:h-125 flex items-center justify-center relative"
         >
           <div className="relative">
-            
             {/* ICON */}
             <motion.div
               initial={{ opacity: 0, scale: 0.7 }}

@@ -34,10 +34,9 @@ const perception = [
 
 export default function BrandDifferentials() {
   return (
-    <section className="w-full min-h-screen flex items-center justify-center px-2 py-10 pt-24 md:pt-0 md:-mt-8">
+    <section className="w-full min-h-screen flex items-center justify-center px-2 py-10 pt-24 md:pt-0 md:-mt-10">
       <div className="w-full max-w-4xl px-1.5 py-10 text-[#26323f]">
         <div className="space-y-10">
-
           {/* DIFERENCIAIS */}
           <motion.div
             initial="hidden"
@@ -46,7 +45,7 @@ export default function BrandDifferentials() {
             custom={0}
             variants={fadeUp}
           >
-            <h2 className="text-[#22303e] text-xl md:text-4xl font-semibold tracking-tight mb-8">
+            <h2 className="text-[#22303e] text-2xl md:text-3xl font-semibold tracking-tight mb-10">
               Diferenciais
             </h2>
 
@@ -76,6 +75,7 @@ export default function BrandDifferentials() {
                 </motion.div>
               ))}
             </div>
+            <div className="mb-10 border-b border-[#26323f]/10 pb-8"></div>
           </motion.div>
 
           {/* PERCEPÇÃO DA MARCA */}
@@ -86,7 +86,7 @@ export default function BrandDifferentials() {
             custom={0.15}
             variants={fadeUp}
           >
-            <h2 className="text-[#22303e] text-xl md:text-4xl font-semibold tracking-tight mb-8">
+            <h2 className="text-[#22303e] text-2xl md:text-3xl font-semibold tracking-tight mb-8">
               Como a marca quer ser percebida
             </h2>
 
@@ -117,7 +117,6 @@ export default function BrandDifferentials() {
               ))}
             </div>
           </motion.div>
-
         </div>
       </div>
     </section>

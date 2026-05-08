@@ -56,7 +56,7 @@ export default function ColorPaletteConcept() {
           custom={0}
           variants={fadeUp}
           className="
-            text-xl md:text-4xl
+            text-2xl md:text-3xl
             font-semibold
             tracking-tight
             mb-8 md:mb-10
@@ -136,7 +136,7 @@ export default function ColorPaletteConcept() {
                     className="
                       text-lg md:text-xl
                       font-semibold
-                      leading-none
+                      leading-1
                       mb-2
                     "
                   >

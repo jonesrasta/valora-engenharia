@@ -30,9 +30,8 @@ const paragraphs = [
 
 export default function BrandPresentation() {
   return (
-    <section className="w-full min-h-screen flex items-center justify-center px-2 py-10 pt-24 md:pt-0 md:-mt-8">
+    <section className="w-full min-h-screen flex items-center justify-center px-2 py-10 pt-24 md:pt-0 md:-mt-14">
       <div className="w-full max-w-4xl px-1.5 py-10 text-[#26323f]">
-        
         {/* HEADER */}
         <motion.div
           initial="hidden"
@@ -42,10 +41,9 @@ export default function BrandPresentation() {
           variants={fadeUp}
           className="flex items-center gap-4 mb-4"
         >
-
           <h2
             className="
-              text-xl md:text-4xl
+              text-2xl md:text-3xl
               font-semibold
               tracking-[-0.03em]
               leading-none

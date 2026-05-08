@@ -34,11 +34,9 @@ const meanings = [
 
 export default function LogoStructureConcept() {
   return (
-    <section className="w-full min-h-screen flex items-center justify-center px-2 py-10 pt-24 md:pt-0 md:-mt-8">
+    <section className="w-full min-h-screen flex items-center justify-center px-2 py-10 pt-24 md:pt-0 md:-mt-14">
       <div className="w-full max-w-4xl px-1.5 py-10 text-[#26323f]">
-
         <div className="space-y-10">
-
           {/* IDEIA DAS FORMAS */}
           <motion.div
             initial="hidden"
@@ -50,7 +48,7 @@ export default function LogoStructureConcept() {
             <div className="flex items-center gap-4 mb-2">
               <h2
                 className="
-                  text-xl md:text-4xl
+                  text-2xl md:text-3xl
                   font-semibold
                   tracking-[-0.03em]
                   leading-none
@@ -70,9 +68,9 @@ export default function LogoStructureConcept() {
                   max-w-4xl
                 "
               >
-                A construção do logotipo é baseada em um grid técnico,
-                que garante equilíbrio visual, alinhamento e proporção,
-                princípios fundamentais da engenharia.
+                A construção do logotipo é baseada em um grid técnico, que
+                garante equilíbrio visual, alinhamento e proporção, princípios
+                fundamentais da engenharia.
               </p>
 
               <p
@@ -85,7 +83,6 @@ export default function LogoStructureConcept() {
               >
                 As linhas retas e formas limpas transmitem:
               </p>
-
               <div className="space-y-2">
                 {principles.map((item, index) => (
                   <motion.div
@@ -114,6 +111,7 @@ export default function LogoStructureConcept() {
                     </p>
                   </motion.div>
                 ))}
+                <div className="mb-6 border-b border-[#26323f]/10 md:pb-2 pb-6"></div>
               </div>
             </div>
           </motion.div>
@@ -129,7 +127,7 @@ export default function LogoStructureConcept() {
             <div className="flex items-center gap-4 mb-2">
               <h2
                 className="
-                  text-xl md:text-4xl
+                  text-2xl md:text-3xl
                   font-semibold
                   tracking-[-0.03em]
                   leading-none

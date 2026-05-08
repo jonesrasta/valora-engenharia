@@ -76,7 +76,11 @@ export default function Sidebar({
               p-4 md:p-6 z-50 md:z-40 md:px-2
             "
           >
-            <img src="/logo.svg" alt="Valora" className="h-10 mb-10 mt-8 ml-2" />
+            <img
+              src="/logo.svg"
+              alt="Valora"
+              className="h-10 mb-10 mt-8 ml-2"
+            />
 
             <nav className="flex flex-col gap-2">
               {sections.map((item) => {

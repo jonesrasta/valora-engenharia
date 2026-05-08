@@ -8,11 +8,7 @@ interface Props {
   onPrev: () => void;
 }
 
-export default function Carousel({
-  slides,
-  onNext,
-  onPrev,
-}: Props) {
+export default function Carousel({ slides, onNext, onPrev }: Props) {
   if (!slides || slides.length === 0) return null;
 
   const current = slides[0];
@@ -36,10 +32,7 @@ export default function Carousel({
           {current.type === "image" ? (
             <picture className="block w-full h-full">
               {current.mobileSrc && (
-                <source
-                  media="(max-width: 768px)"
-                  srcSet={current.mobileSrc}
-                />
+                <source media="(max-width: 768px)" srcSet={current.mobileSrc} />
               )}
 
               <img
@@ -49,9 +42,7 @@ export default function Carousel({
               />
             </picture>
           ) : (
-            <div className="w-full h-full">
-              {current.component}
-            </div>
+            <div className="w-full h-full">{current.component}</div>
           )}
         </motion.div>
       </AnimatePresence>

@@ -53,22 +53,60 @@ const colors: Color[] = [
   },
 ];
 
+const container = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.18,
+    },
+  },
+};
+
+const cardAnimation = {
+  hidden: {
+    opacity: 0,
+    y: 32,
+    scale: 0.96,
+    filter: "blur(6px)",
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    filter: "blur(0px)",
+    transition: {
+      duration: 0.75,
+      ease: [0.22, 1, 0.36, 1] as const,
+    },
+  },
+};
+
 export default function ColorPalette() {
   return (
-    <div className="w-full p-4 md:p-10">
-      <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-fr gap-3 mt-24 py-8 md:py-10 mb-2">
+    <div className="w-full p-4 md:p-10 overflow-hidden">
+      <motion.div
+        variants={container}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.15 }}
+        className="grid grid-cols-2 md:grid-cols-4 auto-rows-fr gap-3 md:py-10 mb-2 py-10 mt-28 md:mt-16"
+      >
         {colors.map((color) => (
           <motion.div
             key={color.name}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
+            variants={cardAnimation}
+            whileHover={{
+              y: -4,
+              transition: {
+                duration: 0.25,
+              },
+            }}
             className={`
-          rounded-3xl p-6 flex flex-col justify-between
-          ${color.text || "text-[#22303E]"}
-          ${color.span === 4 ? "col-span-2 md:col-span-4" : ""}
-          min-h-50 md:min-h-60
-        `}
+              rounded-3xl p-6 flex flex-col justify-between
+              ${color.text || "text-[#22303E]"}
+              ${color.span === 4 ? "col-span-2 md:col-span-4" : ""}
+              min-h-50 md:min-h-60
+            `}
             style={{ backgroundColor: color.bg }}
           >
             <span className="text-sm md:text-base font-bold tracking-wide">
@@ -82,7 +120,7 @@ export default function ColorPalette() {
             </div>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }
