@@ -1,6 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
 import type { Section } from "../../data/branding";
-import logo from "../../../public/logo.svg";
 import { Minus, Plus } from "lucide-react";
 import { useEffect, useState, useMemo } from "react";
 
@@ -35,14 +34,12 @@ export default function Sidebar({
   const shouldShow = isDesktop || isOpen;
 
   const derivedOpenItem = useMemo(() => {
-    if (openItem) return openItem;
-
     const parent = sections.find((section) =>
       section.children?.some((child) => child.id === active),
     );
 
     return parent?.id ?? null;
-  }, [active, sections, openItem]);
+  }, [active, sections]);
 
   return (
     <>
@@ -79,7 +76,7 @@ export default function Sidebar({
               p-4 md:p-6 z-50 md:z-40 md:px-2
             "
           >
-            <img src={logo} alt="Valora" className="h-10 mb-10 mt-8 ml-2" />
+            <img src="/logo.svg" alt="Valora" className="h-10 mb-10 mt-8 ml-2" />
 
             <nav className="flex flex-col gap-2">
               {sections.map((item) => {
@@ -92,10 +89,11 @@ export default function Sidebar({
                   (openItem === null && derivedOpenItem === item.id);
 
                 return (
+                  // relative z-0
                   <div key={item.id}>
                     <div
                       className={`
-          relative z-0
+          
           flex items-center justify-between
           md:px-6 px-4 py-3 rounded-md
           transition-all duration-200
@@ -128,7 +126,7 @@ export default function Sidebar({
                           className="
       ml-2
       flex items-center justify-center
-      bg-[#79797921]
+      bg-[#7979791f]
       rounded-full
       w-7 h-7
       shrink-0
@@ -140,9 +138,9 @@ export default function Sidebar({
                             className="flex items-center justify-center"
                           >
                             {isOpenItem ? (
-                              <Minus size={18} />
+                              <Minus size={18} color="#F2F9FC" />
                             ) : (
-                              <Plus size={18} />
+                              <Plus size={18} color="#F2F9FC" />
                             )}
                           </motion.div>
                         </button>
@@ -171,8 +169,8 @@ export default function Sidebar({
                                 text-sm text-left transition
                                 ${
                                   active === child.id
-                                    ? "text-white font-medium"
-                                    : "text-white/70 hover:text-white"
+                                    ? "text-[#F2F9FC] font-medium"
+                                    : "text-[#F2F9FC]/70 hover:text-[#F2F9FC]"
                                 }
                               `}
                             >

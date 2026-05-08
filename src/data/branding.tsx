@@ -116,8 +116,8 @@ export const sections: Section[] = [
     ],
   },
   {
-    id: "Mockups",
-    label: "Mockups",
+    id: "aplicacoes",
+    label: "Aplicações marca",
     slides: [
       {
         type: "image",

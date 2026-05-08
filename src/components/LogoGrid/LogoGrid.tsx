@@ -11,7 +11,7 @@ export default function LogoGrid() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="md:col-span-2 bg-[#f5f4f2] flex items-center justify-center px-6 py-40 md:py-20"
+          className="md:col-span-2 bg-[#F2F9FC] flex items-center justify-center px-6 py-40 md:py-20"
         >
           <motion.img
             src="/logo-grid.webp"
