@@ -75,10 +75,10 @@ export default function TypographyShowcase() {
           {/* Alphabet */}
           <div className="flex flex-col items-end text-[#22303e] text-2xl tracking-wide leading-6 mb-16 [&_p]:no-underline">
             <p>abcdefghijklmn</p>
-            <p>
+            <span>
               opqrstuvwxyz<span className="text-zinc-200">..</span>
               <p>1234567890</p>
-            </p>
+            </span>
           </div>
 
           {/* Regular / Bold */}
