@@ -47,7 +47,7 @@ const colors = [
 export default function ColorPaletteConcept() {
   return (
     <section className="w-full min-h-screen flex items-center justify-center px-2 py-10 pt-24 md:pt-0 md:-mt-8">
-      <div className="w-full max-w-4xl px-1.5 py-10 text-[#26323f]">
+      <div className="w-full max-w-5xl px-1.5 md:px-8 py-10 text-[#26323f]">
         {/* TITLE */}
         <motion.h2
           initial="hidden"
@@ -56,10 +56,11 @@ export default function ColorPaletteConcept() {
           custom={0}
           variants={fadeUp}
           className="
-            text-xl md:text-4xl
+            text-lg md:text-4xl
             font-semibold
             tracking-tight
-            mb-8
+            mb-8 md:mb-10
+            leading-none
           "
         >
           Paleta de Cores
@@ -72,13 +73,13 @@ export default function ColorPaletteConcept() {
           viewport={{ once: true }}
           custom={0.1}
           variants={fadeUp}
-          className="space-y-6 mb-14"
+          className="space-y-5 md:space-y-7 mb-14 md:mb-20"
         >
           <p
             className="
-              max-w-4xl
+              max-w-230
               text-[17px] md:text-lg
-              leading-[1.35]
+              leading-[1.18]
               tracking-wide
             "
           >
@@ -89,9 +90,9 @@ export default function ColorPaletteConcept() {
 
           <p
             className="
-              max-w-4xl
+              max-w-230
               text-[17px] md:text-lg
-              leading-[1.35]
+              leading-[1.18]
               tracking-wide
             "
           >
@@ -101,7 +102,7 @@ export default function ColorPaletteConcept() {
         </motion.div>
 
         {/* COLORS */}
-        <div className="space-y-6">
+        <div className="space-y-6 md:space-y-8">
           {colors.map((color, index) => (
             <motion.div
               key={color.name}
@@ -111,18 +112,21 @@ export default function ColorPaletteConcept() {
               custom={0.15 + index * 0.08}
               variants={fadeUp}
               className="
-                flex flex-col md:flex-row
-                md:items-center
-                gap-6 md:gap-4
+                flex flex-col
+                md:grid md:grid-cols-[320px_1fr]
+                md:items-start
+                gap-6 md:gap-10
               "
             >
-              {/* COLOR BLOCK */}
-              <div className="flex items-center gap-5 shrink-0">
+              {/* LEFT */}
+              <div className="flex items-center gap-5">
                 <div
                   className="
                     w-14 h-14 md:w-16 md:h-16
                     rounded-2xl
-                    shadow-sm border border-black/5
+                    shadow-md
+                    border border-black/5
+                    shrink-0
                   "
                   style={{ backgroundColor: color.hex }}
                 />
@@ -130,7 +134,7 @@ export default function ColorPaletteConcept() {
                 <div>
                   <h3
                     className="
-                      text-lg md:text-2xl
+                      text-lg md:text-xl
                       font-semibold
                       leading-none
                       mb-2
@@ -141,10 +145,10 @@ export default function ColorPaletteConcept() {
 
                   <span
                     className="
-                      text-sm md:text-base
+                      text-sm md:text-lg
                       uppercase
-                      tracking-[0.18em]
-                      text-[#22303e]/50
+                      tracking-[0.22em]
+                      text-[#22303e]/45
                     "
                   >
                     {color.hex}
@@ -152,14 +156,15 @@ export default function ColorPaletteConcept() {
                 </div>
               </div>
 
-              {/* DESCRIPTION */}
+              {/* RIGHT */}
               <p
                 className="
                   text-[17px] md:text-lg
-                  leading-[1.35]
+                  leading-[1.18]
                   tracking-wide
                   text-[#2e3c48]
-                  md:max-w-2xl
+                  md:max-w-155
+                  md:pt-1
                 "
               >
                 {color.description}

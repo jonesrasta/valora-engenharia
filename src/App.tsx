@@ -14,7 +14,7 @@ type FlatItem = {
 export default function App() {
   const [isOpen, setOpen] = useState(false);
 
-  // 🔥 LISTA LINEAR
+  
   const flatList: FlatItem[] = useMemo(() => {
     return sections.flatMap((section) => {
       if (section.children) {
@@ -81,7 +81,7 @@ export default function App() {
           setOpen={setOpen}
         />
 
-        <main className="flex-1 flex items-center justify-center md:p-8 overflow-y-auto">
+        <main className="flex-1 flex items-center justify-center md:p-8">
           <div className="w-full max-w-6xl">
             <Carousel slides={slides} onNext={next} onPrev={prev} />
           </div>
