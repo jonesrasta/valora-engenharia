@@ -68,14 +68,14 @@ export default function TypographyShowcase() {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.15 }}
-      className="w-full min-h-screen flex items-center justify-center p-6 md:p-12"
+      className="w-full h-200 flex items-center justify-center p-6 md:p-12"
     >
       <div className="w-full max-w-300">
         {/* MOBILE LAYOUT (EXATO DO DESIGN) */}
         <div className="flex flex-col md:hidden">
           <motion.h1
             variants={smoothReveal}
-            className="text-4xl font-semibold text-[#22303e] mb-8 py-8 md:-mt-10"
+            className="text-4xl font-semibold text-[#22303e] mb-8 py-8"
           >
             Neue Metana
           </motion.h1>

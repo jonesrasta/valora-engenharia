@@ -38,7 +38,7 @@ Juntos, esses elementos traduzem a capacidade da Valora de transformar planejame
 
 export default function LogoConcept() {
   return (
-    <section className="w-full min-h-screen flex items-center justify-center px-2 py-10 pt-24 md:pt-0 md:-mt-8">
+    <section className="w-full md:h-200 flex items-center justify-center px-2 py-10 pt-30 md:pt-0 ">
       <div className="w-full max-w-4xl px-1.5 py-10 text-[#26323f]">
         <div className="space-y-10">
           {sections.map((section, index) => (
@@ -51,7 +51,7 @@ export default function LogoConcept() {
               variants={fadeUp}
             >
               {/* HEADER */}
-              <div className="flex items-center gap-4 mb-4">
+              <div className="flex items-center gap-4 mb-4 -mt-8">
                 <h2
                   className="
                     text-2xl md:text-3xl

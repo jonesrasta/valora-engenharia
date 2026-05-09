@@ -2,17 +2,22 @@ import logo from "../../../public/logo.svg";
 
 export default function Cover() {
   return (
-    <div className="w-full h-screen bg-[#22303e] flex items-center justify-center shadow-xl overflow-hidden">
+    <section className="w-full h-screen md:h-200 bg-[#22303e] flex items-center justify-center overflow-hidden">
       <img
         src={logo}
         alt="Valora"
-        className="w-68 h-auto md:w-120 md:-mt-16"
-        // opacity-80 hover:scale-105 transition
+        className="
+          w-68
+          md:w-120
+          h-auto
+          object-contain
+          select-none
+          pointer-events-none
+        "
       />
-    </div>
+    </section>
   );
 }
-
 // import { motion } from "framer-motion";
 // import logo from "../../../public/logo.svg";
 

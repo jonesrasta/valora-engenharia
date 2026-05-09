@@ -24,7 +24,7 @@ const audience = [
 
 export default function BrandPositioning() {
   return (
-    <section className="w-full min-h-screen flex items-center justify-center px-2 py-20 pt-24 md:pt-0 md:-mt-24">
+    <section className="w-full md:h-200 flex items-center justify-center px-2 py-20 pt-24 md:pt-0 md:-mt-14">
       <div className="w-full max-w-4xl px-1.5 py-10 text-[#26323f]">
         <div className="space-y-10">
           {/* POSICIONAMENTO */}

@@ -15,6 +15,8 @@ import LogoConcept from "../components/LogoConcept/LogoConcept";
 import LogoStructureConcept from "../components/LogoStructureConcept/LogoStructureConcept";
 import TypographyConcept from "../components/TypographyConcept/TypographyConcept";
 import ColorPaletteConcept from "../components/ColorPaletteConcept/ColorPaletteConcept";
+import BrandVoice from "../components/BrandVoice/BrandVoice";
+import BrandCommunication from "../components/BrandCommunication/BrandCommunication";
 
 export type Slide =
   | {
@@ -59,9 +61,9 @@ export const sections: Section[] = [
     id: "Essência da Marca",
     label: "Essência",
     children: [
-      { id: "essencia-marca", label: "Essência da Marca" },
+      { id: "essencia-marca", label: "Essência da marca" },
       { id: "missao", label: "Missão Visão Valores" },
-      { id: "conceito", label: "Conceito da Marca" },
+      { id: "conceito", label: "Conceito da marca" },
       { id: "posicionamento", label: "Posicionamento" },
       { id: "diferenciais", label: "Diferenciais" },
     ],
@@ -77,8 +79,8 @@ export const sections: Section[] = [
     id: "cores",
     label: "Cores",
     children: [
-      { id: "conceito-cores", label: "Conceito de Cores" },
-      { id: "paleta-cores", label: "Paleta de Cores" },
+      { id: "conceito-cores", label: "Conceito de cores" },
+      { id: "paleta-cores", label: "Paleta de cores" },
     ],
     slides: [
       { type: "component", component: <ColorPaletteConcept /> },
@@ -89,9 +91,9 @@ export const sections: Section[] = [
     id: "tipografia",
     label: "Tipografia",
     children: [
-      { id: "tipografia-uso", label: "Uso tipográfico" },
-      { id: "tipografia-primaria", label: "Fonte Primária" },
-      { id: "tipografia-secundaria", label: "Fonte Secundária" },
+      { id: "tipografia-uso", label: "Sistema tipográfico" },
+      { id: "tipografia-primaria", label: "Fonte primária" },
+      { id: "tipografia-secundaria", label: "Fonte secundária" },
     ],
     slides: [
       { type: "component", component: <TypographyConcept /> },
@@ -100,12 +102,24 @@ export const sections: Section[] = [
     ],
   },
   {
+    id: "comunicacao-marca",
+    label: "Comunicação",
+    children: [
+      { id: "tom-voz", label: "Tom de Voz" },
+      { id: "linguagem-verbal", label: "Linguagem Verbal" },
+    ],
+    slides: [
+      { type: "component", component: <BrandVoice /> },
+      { type: "component", component: <BrandCommunication /> },
+    ],
+  },
+  {
     id: "logo",
     label: "Logotipo",
     children: [
-      { id: "conceito-logo", label: "Conceito Logotipo" },
-      { id: "grid-logo", label: "Logotipo Grid" },
-      { id: "formas-logo", label: "Formas Logotipo" },
+      { id: "conceito-logo", label: "Conceito logotipo" },
+      { id: "grid-logo", label: "Construção logotipo" },
+      { id: "formas-logo", label: "Formas logotipo" },
       { id: "logo-colors", label: "Cores aplicadas" },
     ],
     slides: [

@@ -50,7 +50,7 @@ const item = {
 
 export default function LogoShowcase() {
   return (
-    <section className="w-full overflow-hidden md:rounded-3xl">
+    <section className="w-full md:h-200 overflow-hidden md:rounded-3xl">
       <motion.div
         variants={container}
         initial="hidden"
