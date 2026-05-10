@@ -78,10 +78,7 @@ export default function BrandVoice() {
         className="w-full max-w-5xl px-1.5 text-[#26323f]"
       >
         {/* HEADER */}
-        <motion.div
-          variants={fadeUp}
-          className="mb-10"
-        >
+        <motion.div variants={fadeUp} className="mb-10">
           <motion.h2
             variants={fadeUp}
             className="
@@ -106,9 +103,8 @@ export default function BrandVoice() {
               mb-6
             "
           >
-            O tom de voz da Valora Engenharia reflete seu posicionamento
-            de alto padrão, unindo clareza, autoridade e sofisticação
-            na comunicação.
+            O tom de voz da Valora Engenharia reflete seu posicionamento de alto
+            padrão, unindo clareza, autoridade e sofisticação na comunicação.
           </motion.p>
 
           <motion.p
@@ -122,17 +118,14 @@ export default function BrandVoice() {
             "
           >
             A forma como a marca se expressa deve transmitir segurança,
-            conhecimento técnico e confiança, mantendo sempre uma
-            comunicação objetiva e bem estruturada.
+            conhecimento técnico e confiança, mantendo sempre uma comunicação
+            objetiva e bem estruturada.
           </motion.p>
           <div className="mb-10 border-b border-[#26323f]/10 pb-6"></div>
         </motion.div>
 
         {/* SUBTITLE */}
-        <motion.div
-          variants={fadeUp}
-          className="mb-10"
-        >
+        <motion.div variants={fadeUp} className="mb-10">
           <h3
             className="
               text-2xl md:text-3xl
@@ -153,50 +146,58 @@ export default function BrandVoice() {
               mt-4
             "
           >
-            A Valora Engenharia busca ser reconhecida
-            como uma marca:
+            A Valora Engenharia busca ser reconhecida como uma marca:
           </p>
         </motion.div>
 
         {/* CARDS */}
         <motion.div
           variants={container}
-          className="grid grid-cols-1 md:grid-cols-2 gap-4"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.15 }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6"
         >
           {voiceItems.map((item, index) => (
             <motion.div
               key={index}
               variants={cardAnimation}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.8,
+                delay: index * 0.18,
+                ease: [0.22, 1, 0.36, 1],
+              }}
               whileHover={{
                 y: -4,
                 transition: { duration: 0.25 },
               }}
               className="
-                rounded-3xl
-                border border-[#22303e]/10
-                bg-[#f8fafb]
-                p-6 md:p-8
-                backdrop-blur-sm
-              "
+        rounded-3xl
+        border border-[#22303e]/10
+        bg-[#F2F9FC]
+        p-6 md:p-8
+        backdrop-blur-sm
+      "
             >
               <h4
                 className="
-                  text-lg md:text-xl
-                  font-semibold
-                  text-[#22303e]
-                  mb-4
-                "
+          text-lg md:text-xl
+          font-semibold
+          text-[#22303e]
+          mb-4
+        "
               >
                 {item.title}
               </h4>
 
               <p
                 className="
-                  text-[16px] md:text-lg
-                  leading-relaxed
-                  tracking-wide
-                  text-[#2e3c48]
-                "
+          text-[16px] md:text-lg
+          leading-relaxed
+          tracking-wide
+          text-[#2e3c48]
+        "
               >
                 {item.text}
               </p>

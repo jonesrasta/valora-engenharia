@@ -17,6 +17,8 @@ import TypographyConcept from "../components/TypographyConcept/TypographyConcept
 import ColorPaletteConcept from "../components/ColorPaletteConcept/ColorPaletteConcept";
 import BrandVoice from "../components/BrandVoice/BrandVoice";
 import BrandCommunication from "../components/BrandCommunication/BrandCommunication";
+import FinalCard from "../components/FinalCard/FinalCard";
+import Conclusion from "../components/Conclusion/Conclusion";
 
 export type Slide =
   | {
@@ -166,5 +168,15 @@ export const sections: Section[] = [
         mobileSrc: "/images/14-mobile.webp",
       },
     ],
+  },
+  {
+    id: "conclusao",
+    label: "Conclusão",
+    slides: [{ type: "component", component: <Conclusion /> }],
+  },
+  {
+    id: "construindo-valor",
+    label: "Construindo Valor",
+    slides: [{ type: "component", component: <FinalCard /> }],
   },
 ];
