@@ -21,6 +21,8 @@ import Conclusion from "../components/Conclusion/Conclusion";
 import FeatureGrid from "../components/FeatureGrid/FeatureGrid";
 
 import type { ComponentType } from "react";
+import LogoStructure from "../components/LogoStructure/LogoStructure";
+import LogoOnDark from "../components/LogoOnDark/LogoOnDark";
 
 export type Slide =
   | {
@@ -71,6 +73,7 @@ export const sections: Section[] = [
       { id: "posicionamento", label: "Posicionamento" },
       { id: "diferenciais", label: "Diferenciais" },
       { id: "branding-urbano", label: "Branding Urbano" },
+      { id: "logo-dark", label: "Logo on Dark" },
     ],
     slides: [
       { type: "component", component: BrandEssence  },
@@ -83,6 +86,7 @@ export const sections: Section[] = [
         src: "/images/8.webp",
         mobileSrc: "/images/8-mobile.webp",
       },
+{ type: "component", component: LogoOnDark  },
     ],
   },
   {
@@ -136,6 +140,7 @@ export const sections: Section[] = [
       { id: "conceito-logo", label: "Conceito logotipo" },
       { id: "grid-logo", label: "Construção logotipo" },
       { id: "formas-logo", label: "Formas logotipo" },
+      { id: "grid-marca", label: "Grid da Marca" },
       { id: "logo-colors", label: "Cores aplicadas" },
       { id: "variacao-marca", label: "Variações da Marca" },
     ],
@@ -143,6 +148,7 @@ export const sections: Section[] = [
       { type: "component", component: LogoConcept  },
       { type: "component", component: LogoGrid  },
       { type: "component", component: LogoStructureConcept  },
+      { type: "component", component: LogoStructure  },
       { type: "component", component: LogoShowcase  },
       { type: "component", component: FeatureGrid  },
     ],

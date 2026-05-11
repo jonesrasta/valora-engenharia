@@ -59,12 +59,9 @@ export default function Carousel({
           }
           className="
             absolute inset-0
-
             overflow-y-auto
             overflow-x-hidden
-
             scrollbar-hide
-
             will-change-transform
           "
           initial={{
@@ -102,14 +99,10 @@ export default function Carousel({
                 className="
                   w-full
                   h-full
-
                   object-cover
-
                   md:rounded-3xl
-
                   select-none
                   pointer-events-none
-
                   will-change-transform
                 "
               />
@@ -133,13 +126,10 @@ export default function Carousel({
       <div
         className="
           fixed md:absolute
-
-          bottom-6
-          right-6
-
+          bottom-4
+          right-4
           z-50
-
-          flex gap-2
+          flex gap-1.5
         "
       >
         <button
@@ -147,16 +137,11 @@ export default function Carousel({
           aria-label="Slide anterior"
           className="
             flex items-center justify-center
-
             h-10 w-10
-
             rounded-full
-
             bg-black/40
             backdrop-blur-md
-
             transition-all duration-300
-
             hover:bg-black/60
             active:scale-95
           "
@@ -172,16 +157,11 @@ export default function Carousel({
           aria-label="Próximo slide"
           className="
             flex items-center justify-center
-
             h-10 w-10
-
             rounded-full
-
             bg-black/40
             backdrop-blur-md
-
             transition-all duration-300
-
             hover:bg-black/60
             active:scale-95
           "
