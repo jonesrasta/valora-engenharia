@@ -110,7 +110,7 @@ export default function LogoShowcase() {
                     bg-white/10
                     blur-xl
                     transition-transform
-                    duration-[1800ms]
+                    duration-1800ms
                     ease-linear
                     group-hover:translate-x-[140vw]
                   "
