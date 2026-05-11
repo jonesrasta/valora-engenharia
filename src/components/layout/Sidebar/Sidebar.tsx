@@ -51,7 +51,7 @@ export default function Sidebar({
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.4 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-[#22303E] z-30 backdrop-blur-sm overflow-hidden"
+            className="fixed inset-0 bg-[#22303E] z-30 backdrop-blur-sm overflow-auto"
             onClick={() => setOpen(false)}
           />
         )}
@@ -72,7 +72,7 @@ export default function Sidebar({
               w-[67%] md:max-w-80 md:w-70 2xl:w-80
               bg-[#22303ec7] md:bg-[#22303e]
               backdrop-blur-md md:backdrop-blur-none
-              text-[#F2F9FC] 
+              text-[#F2F9FC] overflow-y-scroll
               p-4 md:p-6 z-50 md:z-40 md:px-2
             "
           >
@@ -99,7 +99,7 @@ export default function Sidebar({
                       className={`
           
           flex items-center justify-between
-          md:px-6 px-4 py-3 rounded-md
+          md:px-6 px-4 py-2.5 md:py-3 rounded-md
           transition-all duration-200
           ${isActive ? "bg-[#ffffff0e]" : "hover:bg-white/10"}
         `}

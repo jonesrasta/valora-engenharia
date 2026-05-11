@@ -19,6 +19,7 @@ import BrandVoice from "../components/BrandVoice/BrandVoice";
 import BrandCommunication from "../components/BrandCommunication/BrandCommunication";
 import FinalCard from "../components/FinalCard/FinalCard";
 import Conclusion from "../components/Conclusion/Conclusion";
+import FeatureGrid from "../components/FeatureGrid/FeatureGrid";
 
 export type Slide =
   | {
@@ -123,17 +124,31 @@ export const sections: Section[] = [
       { id: "grid-logo", label: "Construção logotipo" },
       { id: "formas-logo", label: "Formas logotipo" },
       { id: "logo-colors", label: "Cores aplicadas" },
+      { id: "variacao-marca", label: "Variações da Marca" },
     ],
     slides: [
       { type: "component", component: <LogoConcept /> },
       { type: "component", component: <LogoGrid /> },
       { type: "component", component: <LogoStructureConcept /> },
+      
       { type: "component", component: <LogoShowcase /> },
+      { type: "component", component: <FeatureGrid /> },
     ],
   },
+
   {
-    id: "aplicacoes",
-    label: "Aplicações marca",
+    id: "brand-applications",
+    label: "Aplicações da Marca",
+    children: [
+      { id: "digital", label: "Interface Mobile" },
+      { id: "institutional", label: "Tapume Urbano" },
+      { id: "cartão", label: "Cartão de Visita" },
+      { id: "uniforme", label: "Uniforme" },
+      { id: "aplicacao-epis", label: "Aplicação em EPIs" },
+      { id: "office", label: "Office" },
+      { id: "midias", label: "Mídias Sociais" },
+      { id: "favicon", label: "Ícone Digital" },
+    ],
     slides: [
       {
         type: "image",
@@ -156,6 +171,11 @@ export const sections: Section[] = [
       {
         type: "image",
         src: "/images/12.webp",
+      },
+            {
+        type: "image",
+        src: "/images/logo-office.webp",
+        mobileSrc: "/images/logo-office-mobile.webp",
       },
       {
         type: "image",

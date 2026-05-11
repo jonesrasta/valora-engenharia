@@ -11,7 +11,7 @@ export default function FinalCard() {
         h-screen
         bg-[#22303e]
         flex items-center justify-center
-        overflow-hidden
+        overflow-hidden md:h-200
         px-6
       "
     >
