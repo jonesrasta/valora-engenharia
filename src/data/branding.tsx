@@ -1,4 +1,3 @@
-import type { ReactNode } from "react";
 import Cover from "../components/Cover/Cover";
 import ColorPalette from "../components/ColorPalette/ColorPalette";
 import TypographyShowcase from "../components/TypographyShowcase/TypographyShowcase";
@@ -21,6 +20,8 @@ import FinalCard from "../components/FinalCard/FinalCard";
 import Conclusion from "../components/Conclusion/Conclusion";
 import FeatureGrid from "../components/FeatureGrid/FeatureGrid";
 
+import type { ComponentType } from "react";
+
 export type Slide =
   | {
       type: "image";
@@ -29,7 +30,7 @@ export type Slide =
     }
   | {
       type: "component";
-      component: ReactNode;
+      component: ComponentType;
     };
 
 export interface Section {
@@ -46,7 +47,7 @@ export const sections: Section[] = [
   {
     id: "capa",
     label: "Capa",
-    slides: [{ type: "component", component: <Cover /> }],
+    slides: [{ type: "component", component: Cover }],
   },
   {
     id: "apresentacao",
@@ -57,7 +58,7 @@ export const sections: Section[] = [
     ],
     slides: [
       { type: "image", src: "/images/1.webp" },
-      { type: "component", component: <BrandPresentation /> },
+      { type: "component", component: BrandPresentation  },
     ],
   },
   {
@@ -72,11 +73,11 @@ export const sections: Section[] = [
       { id: "branding-urbano", label: "Branding Urbano" },
     ],
     slides: [
-      { type: "component", component: <BrandEssence /> },
-      { type: "component", component: <MissionVisionValues /> },
-      { type: "component", component: <BrandConcept /> },
-      { type: "component", component: <BrandPositioning /> },
-      { type: "component", component: <BrandDifferentials /> },
+      { type: "component", component: BrandEssence  },
+      { type: "component", component: MissionVisionValues },
+      { type: "component", component: BrandConcept  },
+      { type: "component", component: BrandPositioning },
+      { type: "component", component: BrandDifferentials  },
       {
         type: "image",
         src: "/images/8.webp",
@@ -92,8 +93,8 @@ export const sections: Section[] = [
       { id: "paleta-cores", label: "Paleta de cores" },
     ],
     slides: [
-      { type: "component", component: <ColorPaletteConcept /> },
-      { type: "component", component: <ColorPalette /> },
+      { type: "component", component: ColorPaletteConcept },
+      { type: "component", component: ColorPalette  },
     ],
   },
   {
@@ -105,9 +106,9 @@ export const sections: Section[] = [
       { id: "tipografia-secundaria", label: "Fonte secundária" },
     ],
     slides: [
-      { type: "component", component: <TypographyConcept /> },
-      { type: "component", component: <TypographyShowcase /> },
-      { type: "component", component: <TypographySecundary /> },
+      { type: "component", component: TypographyConcept  },
+      { type: "component", component: TypographyShowcase  },
+      { type: "component", component: TypographySecundary  },
     ],
   },
   {
@@ -119,8 +120,8 @@ export const sections: Section[] = [
       { id: "midia-urbana", label: "Mídia Urbana" },
     ],
     slides: [
-      { type: "component", component: <BrandVoice /> },
-      { type: "component", component: <BrandCommunication /> },
+      { type: "component", component: BrandVoice  },
+      { type: "component", component: BrandCommunication  },
       {
         type: "image",
         src: "/images/bus-urban.webp",
@@ -139,11 +140,11 @@ export const sections: Section[] = [
       { id: "variacao-marca", label: "Variações da Marca" },
     ],
     slides: [
-      { type: "component", component: <LogoConcept /> },
-      { type: "component", component: <LogoGrid /> },
-      { type: "component", component: <LogoStructureConcept /> },
-      { type: "component", component: <LogoShowcase /> },
-      { type: "component", component: <FeatureGrid /> },
+      { type: "component", component: LogoConcept  },
+      { type: "component", component: LogoGrid  },
+      { type: "component", component: LogoStructureConcept  },
+      { type: "component", component: LogoShowcase  },
+      { type: "component", component: FeatureGrid  },
     ],
   },
 
@@ -197,11 +198,11 @@ export const sections: Section[] = [
   {
     id: "conclusao",
     label: "Conclusão",
-    slides: [{ type: "component", component: <Conclusion /> }],
+    slides: [{ type: "component", component: Conclusion  }],
   },
   {
     id: "construindo-valor",
     label: "Construindo Valor",
-    slides: [{ type: "component", component: <FinalCard /> }],
+    slides: [{ type: "component", component: FinalCard  }],
   },
 ];

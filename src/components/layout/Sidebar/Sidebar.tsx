@@ -135,7 +135,6 @@ export default function Sidebar({
               fixed md:static
               top-0 left-0
               h-screen
-
               w-[67%]
               md:max-w-80
               md:w-70
@@ -153,7 +152,6 @@ export default function Sidebar({
 
               p-4 md:p-6
               md:px-2
-
               z-40
             "
           >

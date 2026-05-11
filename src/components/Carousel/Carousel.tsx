@@ -1,6 +1,11 @@
 import { motion, AnimatePresence } from "framer-motion";
 import type { Slide } from "../../data/branding";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+
+import {
+  ArrowLeft,
+  ArrowRight,
+} from "lucide-react";
+
 import { useEffect, useRef } from "react";
 
 interface Props {
@@ -9,11 +14,16 @@ interface Props {
   onPrev: () => void;
 }
 
-export default function Carousel({ slides, onNext, onPrev }: Props) {
+export default function Carousel({
+  slides,
+  onNext,
+  onPrev,
+}: Props) {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const current = slides[0];
 
+  // RESET SCROLL AO TROCAR SLIDE
   useEffect(() => {
     if (!scrollRef.current || !current) return;
 
@@ -23,6 +33,7 @@ export default function Carousel({ slides, onNext, onPrev }: Props) {
     } as ScrollToOptions);
   }, [current]);
 
+  // SEM SLIDES
   if (!slides.length || !current) {
     return null;
   }
@@ -48,9 +59,13 @@ export default function Carousel({ slides, onNext, onPrev }: Props) {
           }
           className="
             absolute inset-0
+
             overflow-y-auto
             overflow-x-hidden
+
             scrollbar-hide
+
+            will-change-transform
           "
           initial={{
             opacity: 0,
@@ -69,61 +84,112 @@ export default function Carousel({ slides, onNext, onPrev }: Props) {
             ease: [0.22, 1, 0.36, 1],
           }}
         >
+          {/* IMAGE */}
           {current.type === "image" ? (
             <picture className="block w-full h-full">
               {current.mobileSrc && (
-                <source media="(max-width: 768px)" srcSet={current.mobileSrc} />
+                <source
+                  media="(max-width: 768px)"
+                  srcSet={current.mobileSrc}
+                />
               )}
 
               <img
                 src={current.src}
                 alt=""
+                loading="eager"
+                draggable={false}
                 className="
                   w-full
                   h-full
+
                   object-cover
+
                   md:rounded-3xl
+
                   select-none
                   pointer-events-none
+
+                  will-change-transform
                 "
               />
             </picture>
           ) : (
-            <div className="w-full min-h-full">{current.component}</div>
+            // COMPONENT
+            (() => {
+              const Component = current.component;
+
+              return (
+                <div className="w-full min-h-full">
+                  <Component />
+                </div>
+              );
+            })()
           )}
         </motion.div>
       </AnimatePresence>
 
-      {/* BOTÕES */}
-      <div className="fixed bottom-6 right-6 z-50 flex gap-2 md:absolute">
+      {/* CONTROLS */}
+      <div
+        className="
+          fixed md:absolute
+
+          bottom-6
+          right-6
+
+          z-50
+
+          flex gap-2
+        "
+      >
         <button
           onClick={onPrev}
+          aria-label="Slide anterior"
           className="
-            flex h-10 w-10
-            items-center justify-center
+            flex items-center justify-center
+
+            h-10 w-10
+
             rounded-full
+
             bg-black/40
             backdrop-blur-md
+
             transition-all duration-300
+
             hover:bg-black/60
+            active:scale-95
           "
         >
-          <ArrowLeft size={18} className="text-white" />
+          <ArrowLeft
+            size={18}
+            className="text-white"
+          />
         </button>
 
         <button
           onClick={onNext}
+          aria-label="Próximo slide"
           className="
-            flex h-10 w-10
-            items-center justify-center
+            flex items-center justify-center
+
+            h-10 w-10
+
             rounded-full
+
             bg-black/40
             backdrop-blur-md
+
             transition-all duration-300
+
             hover:bg-black/60
+            active:scale-95
           "
         >
-          <ArrowRight size={18} className="text-white" />
+          <ArrowRight
+            size={18}
+            className="text-white"
+          />
         </button>
       </div>
     </div>
