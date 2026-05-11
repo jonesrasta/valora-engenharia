@@ -16,7 +16,7 @@ const cards = [
       "rounded-[2rem] md:rounded-[2.5rem] aspect-square p-10",
 
     imageClass:
-      "max-w-[200px]",
+      "max-w-[220px]",
 
     hover: {
       y: -10,
@@ -31,10 +31,10 @@ const cards = [
     alt: "Valora Light Logo",
 
     cardClass:
-      "rounded-[2rem] aspect-square",
+      "rounded-[2rem] aspect-square p-10",
 
     imageClass:
-      "max-w-[100px] ml-4",
+      "max-w-[120px]",
 
     hover: {
       y: -14,
@@ -52,7 +52,7 @@ const cards = [
       "rounded-[2rem] aspect-square p-16",
 
     imageClass:
-      "max-w-[200px]",
+      "max-w-[220px]",
 
     hover: {
       rotate: -2,
@@ -70,7 +70,7 @@ const cards = [
       "rounded-[2rem] aspect-square p-14 md:mb-0 mb-20",
 
     imageClass:
-      "max-w-[100px] ml-4",
+      "max-w-[120px]",
 
     hover: {
       rotate: 2,
@@ -94,10 +94,12 @@ const item: Variants = {
     y: 50,
     scale: 0.92,
   },
+
   show: {
     opacity: 1,
     y: 0,
     scale: 1,
+
     transition: {
       duration: 0.7,
       ease: [0.22, 1, 0.36, 1] as const,
@@ -107,78 +109,84 @@ const item: Variants = {
 
 export default function BrandGrid() {
   return (
-    <section className="w-full bg-[#101820] min-h-screen md:min-h-200 px-6 pt-28 md:pt-10 justify-center items-center flex">
+    <section className="flex overflow-hidden md:h-200 w-full items-center justify-center bg-[#101820] px-6 pt-28 md:pt-2">
       <motion.div
         variants={container}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.2 }}
         className="
-  mx-auto
-  grid
-  max-w-180
-  grid-cols-1
-  gap-8
-  md:grid-cols-2
-"
-      >
-{cards.map((card) => (
-  <motion.div
-    key={card.id}
-    variants={item}
-    whileHover={card.hover}
-    transition={{
-      type: "spring",
-      stiffness: 220,
-      damping: 18,
-    }}
-    className={`
-      group
-      relative
-      overflow-hidden
-      shadow-[0_10px_40px_rgba(0,0,0,0.08)]
-      ${card.cardClass}
-    `}
-    style={{
-      backgroundColor: card.bg,
-    }}
-  >
-    <div
-      className="
-        absolute
-        inset-0
-        opacity-0
-        transition-opacity
-        duration-500
-        group-hover:opacity-100
-      "
-    >
-      <div
-        className="
-          absolute
-          inset-0
-          bg-linear-to-br
-          from-white/10
-          to-transparent
-        "
-      />
-    </div>
-
-    <div className="flex h-full w-full items-center justify-center">
-      <img
-        src={card.image}
-        alt={card.alt}
-        className={`
+          mx-auto
+          grid
           w-full
-          object-contain
-          select-none
-          pointer-events-none
-          ${card.imageClass}
-        `}
-      />
-    </div>
-  </motion.div>
-))}
+          max-w-180
+          grid-cols-1
+          gap-8
+          md:grid-cols-2
+        "
+      >
+        {cards.map((card) => (
+          <motion.div
+            key={card.id}
+            variants={item}
+            whileHover={card.hover}
+            transition={{
+              type: "spring",
+              stiffness: 220,
+              damping: 18,
+            }}
+            className={`
+              group
+              relative
+              flex
+              items-center
+              justify-center
+              overflow-hidden
+              shadow-[0_10px_40px_rgba(0,0,0,0.08)]
+              ${card.cardClass}
+            `}
+            style={{
+              backgroundColor: card.bg,
+            }}
+          >
+            <div
+              className="
+                absolute
+                inset-0
+                opacity-0
+                transition-opacity
+                duration-500
+                group-hover:opacity-100
+              "
+            >
+              <div
+                className="
+                  absolute
+                  inset-0
+                  bg-linear-to-br
+                  from-white/10
+                  to-transparent
+                "
+              />
+            </div>
+
+            <div className="relative z-10 flex h-full w-full items-center justify-center">
+              <img
+                src={card.image}
+                alt={card.alt}
+                className={`
+                  block
+                  h-auto
+                  w-auto
+                  object-contain
+                  select-none
+                  pointer-events-none
+                  ${card.imageClass}
+                `}
+              />
+            </div>
+          </motion.div>
+        ))}
       </motion.div>
     </section>
   );

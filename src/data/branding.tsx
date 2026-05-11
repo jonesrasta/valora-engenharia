@@ -69,6 +69,7 @@ export const sections: Section[] = [
       { id: "conceito", label: "Conceito da marca" },
       { id: "posicionamento", label: "Posicionamento" },
       { id: "diferenciais", label: "Diferenciais" },
+      { id: "branding-urbano", label: "Branding Urbano" },
     ],
     slides: [
       { type: "component", component: <BrandEssence /> },
@@ -76,6 +77,11 @@ export const sections: Section[] = [
       { type: "component", component: <BrandConcept /> },
       { type: "component", component: <BrandPositioning /> },
       { type: "component", component: <BrandDifferentials /> },
+      {
+        type: "image",
+        src: "/images/8.webp",
+        mobileSrc: "/images/8-mobile.webp",
+      },
     ],
   },
   {
@@ -110,10 +116,16 @@ export const sections: Section[] = [
     children: [
       { id: "tom-voz", label: "Tom de Voz" },
       { id: "linguagem-verbal", label: "Linguagem Verbal" },
+      { id: "midia-urbana", label: "Mídia Urbana" },
     ],
     slides: [
       { type: "component", component: <BrandVoice /> },
       { type: "component", component: <BrandCommunication /> },
+      {
+        type: "image",
+        src: "/images/bus-urban.webp",
+        mobileSrc: "/images/bus-urban-mobile.webp",
+      },
     ],
   },
   {
@@ -130,7 +142,6 @@ export const sections: Section[] = [
       { type: "component", component: <LogoConcept /> },
       { type: "component", component: <LogoGrid /> },
       { type: "component", component: <LogoStructureConcept /> },
-      
       { type: "component", component: <LogoShowcase /> },
       { type: "component", component: <FeatureGrid /> },
     ],
@@ -141,7 +152,6 @@ export const sections: Section[] = [
     label: "Aplicações da Marca",
     children: [
       { id: "digital", label: "Interface Mobile" },
-      { id: "institutional", label: "Tapume Urbano" },
       { id: "cartão", label: "Cartão de Visita" },
       { id: "uniforme", label: "Uniforme" },
       { id: "aplicacao-epis", label: "Aplicação em EPIs" },
@@ -156,11 +166,6 @@ export const sections: Section[] = [
       },
       {
         type: "image",
-        src: "/images/8.webp",
-        mobileSrc: "/images/8-mobile.webp",
-      },
-      {
-        type: "image",
         src: "/images/10.webp",
         mobileSrc: "/images/10-mobile.webp",
       },
@@ -172,7 +177,7 @@ export const sections: Section[] = [
         type: "image",
         src: "/images/12.webp",
       },
-            {
+      {
         type: "image",
         src: "/images/logo-office.webp",
         mobileSrc: "/images/logo-office-mobile.webp",

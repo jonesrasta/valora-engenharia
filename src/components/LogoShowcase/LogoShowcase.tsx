@@ -50,7 +50,7 @@ const item = {
 
 export default function LogoShowcase() {
   return (
-    <section className="w-full md:h-200 overflow-hidden md:rounded-3xl">
+    <section className="w-full h-full md:h-200 overflow-hidden md:rounded-3xl">
       <motion.div
         variants={container}
         initial="hidden"
@@ -67,10 +67,10 @@ export default function LogoShowcase() {
             className={`
               relative
               ${logo.bg}
-              w-full h-68
+              w-full md:h-68
               flex items-center justify-center
-              py-14 md:py-20
-              px-6
+              py-14 md:py-20 
+              h-72 px-6
               overflow-hidden
               group
             `}

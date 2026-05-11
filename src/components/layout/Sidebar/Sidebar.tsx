@@ -173,8 +173,10 @@ export default function Sidebar({
                                 text-sm text-left transition
                                 ${
                                   active === child.id
-                                    ? "text-[#F2F9FC] font-medium"
-                                    : "text-[#F2F9FC]/70 hover:text-[#F2F9FC]"
+                                    ? "text-[#F98058]/80 font-medium"
+                                    : "text-[#F2F9FC]/70 hover:text-[#F98058]/80"
+                                  // ? "text-[#F2F9FC] font-medium"
+                                  // : "text-[#F2F9FC]/70 hover:text-[#F2F9FC]"
                                 }
                               `}
                             >
@@ -194,10 +196,6 @@ export default function Sidebar({
     </>
   );
 }
-
-
-
-
 
 // import { motion, AnimatePresence } from "framer-motion";
 // import type { Section } from "../../../data/branding";
