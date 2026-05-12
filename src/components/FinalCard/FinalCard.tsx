@@ -48,11 +48,11 @@ export default function FinalCard() {
             ease: smooth,
           }}
           className="
-            w-64 md:w-md
+            w-74 md:w-md
             object-contain
             select-none
             pointer-events-none
-            mb-8
+            mb-4 md:mb-6
           "
         />
 

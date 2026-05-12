@@ -35,7 +35,7 @@ export default function Conclusion() {
         min-h-screen
         flex items-center justify-center
         px-2
-        pt-24 md:pt-0 md:-mt-16
+        pt-20 md:pt-0 md:-mt-16
         overflow-hidden
       "
     >

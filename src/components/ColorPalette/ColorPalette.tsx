@@ -89,7 +89,7 @@ export default function ColorPalette() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.15 }}
-        className="grid grid-cols-2 md:grid-cols-4 auto-rows-fr gap-3 md:py-10 mb-2 py-10 mt-28 md:mt-16"
+        className="grid grid-cols-2 md:grid-cols-4 auto-rows-fr gap-3 md:py-10 mb-2 py-10 mt-16 md:mt-16"
       >
         {colors.map((color) => (
           <motion.div

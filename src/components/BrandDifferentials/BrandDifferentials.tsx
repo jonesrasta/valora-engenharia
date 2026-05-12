@@ -34,7 +34,7 @@ const perception = [
 
 export default function BrandDifferentials() {
   return (
-    <section className="w-full min-h-screen flex items-center justify-center px-2 py-10 pt-24 md:pt-0 md:-mt-10">
+    <section className="w-full min-h-screen flex items-center justify-center px-2 py-10 pt-20 md:pt-0 md:-mt-10">
       <div className="w-full max-w-4xl px-1.5 py-10 text-[#26323f]">
         <div className="space-y-10">
           {/* DIFERENCIAIS */}

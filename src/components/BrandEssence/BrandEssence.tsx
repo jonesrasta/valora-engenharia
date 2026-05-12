@@ -36,7 +36,7 @@ export default function BrandEssence() {
   ];
 
   return (
-    <section className="w-full min-h-screen flex items-center justify-center px-2 pt-24 md:pt-0 md:-mt-14 overflow-hidden">
+    <section className="w-full min-h-screen flex items-center justify-center px-2 pt-20 md:pt-0 md:-mt-14 overflow-hidden">
       <motion.div
         variants={container}
         initial="hidden"

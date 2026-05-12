@@ -46,7 +46,7 @@ const colors = [
 
 export default function ColorPaletteConcept() {
   return (
-    <section className="w-full min-h-screen flex items-center justify-center px-2 py-10 pt-24 md:pt-0 md:-mt-8">
+    <section className="w-full min-h-screen flex items-center justify-center px-2 py-10 pt-20 md:pt-0 md:-mt-8">
       <div className="w-full max-w-5xl px-1.5 md:px-8 py-10 text-[#26323f]">
         {/* TITLE */}
         <motion.h2

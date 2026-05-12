@@ -7,7 +7,7 @@ export default function Cover() {
         src={logo}
         alt="Valora"
         className="
-          w-68
+          w-74
           md:w-120
           h-auto
           object-contain

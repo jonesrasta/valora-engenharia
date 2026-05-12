@@ -30,7 +30,7 @@ const paragraphs = [
 
 export default function BrandPresentation() {
   return (
-    <section className="w-full md:h-200 flex items-center justify-center px-2 py-10 pt-24 md:pt-0">
+    <section className="w-full md:h-200 flex items-center justify-center px-2 py-10 pt-20 md:pt-0">
       <div className="w-full max-w-4xl px-1.5 py-10 text-[#26323f]">
         {/* HEADER */}
         <motion.div

@@ -79,7 +79,7 @@ const avoidItems = [
 
 export default function BrandCommunication() {
   return (
-    <section className="w-full min-h-screen flex items-center justify-center px-2 py-14 pt-32 md:pt-6 overflow-hidden">
+    <section className="w-full min-h-screen flex items-center justify-center px-2 py-14 pt-28 md:pt-6 overflow-hidden">
       <motion.div
         initial="hidden"
         whileInView="visible"
