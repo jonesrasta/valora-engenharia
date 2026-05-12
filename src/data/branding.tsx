@@ -23,6 +23,7 @@ import FeatureGrid from "../components/FeatureGrid/FeatureGrid";
 import type { ComponentType } from "react";
 import LogoStructure from "../components/LogoStructure/LogoStructure";
 import LogoOnDark from "../components/LogoOnDark/LogoOnDark";
+import InstagramPosts from "../components/InstagramPosts/InstagramPosts";
 
 export type Slide =
   | {
@@ -60,7 +61,7 @@ export const sections: Section[] = [
     ],
     slides: [
       { type: "image", src: "/images/1.webp" },
-      { type: "component", component: BrandPresentation  },
+      { type: "component", component: BrandPresentation },
     ],
   },
   {
@@ -76,17 +77,17 @@ export const sections: Section[] = [
       { id: "logo-dark", label: "Logo on Dark" },
     ],
     slides: [
-      { type: "component", component: BrandEssence  },
+      { type: "component", component: BrandEssence },
       { type: "component", component: MissionVisionValues },
-      { type: "component", component: BrandConcept  },
+      { type: "component", component: BrandConcept },
       { type: "component", component: BrandPositioning },
-      { type: "component", component: BrandDifferentials  },
+      { type: "component", component: BrandDifferentials },
       {
         type: "image",
         src: "/images/8.webp",
         mobileSrc: "/images/8-mobile.webp",
       },
-{ type: "component", component: LogoOnDark  },
+      { type: "component", component: LogoOnDark },
     ],
   },
   {
@@ -98,7 +99,7 @@ export const sections: Section[] = [
     ],
     slides: [
       { type: "component", component: ColorPaletteConcept },
-      { type: "component", component: ColorPalette  },
+      { type: "component", component: ColorPalette },
     ],
   },
   {
@@ -110,9 +111,9 @@ export const sections: Section[] = [
       { id: "tipografia-secundaria", label: "Fonte secundária" },
     ],
     slides: [
-      { type: "component", component: TypographyConcept  },
-      { type: "component", component: TypographyShowcase  },
-      { type: "component", component: TypographySecundary  },
+      { type: "component", component: TypographyConcept },
+      { type: "component", component: TypographyShowcase },
+      { type: "component", component: TypographySecundary },
     ],
   },
   {
@@ -124,8 +125,8 @@ export const sections: Section[] = [
       { id: "midia-urbana", label: "Mídia Urbana" },
     ],
     slides: [
-      { type: "component", component: BrandVoice  },
-      { type: "component", component: BrandCommunication  },
+      { type: "component", component: BrandVoice },
+      { type: "component", component: BrandCommunication },
       {
         type: "image",
         src: "/images/bus-urban.webp",
@@ -145,12 +146,12 @@ export const sections: Section[] = [
       { id: "variacao-marca", label: "Variações da Marca" },
     ],
     slides: [
-      { type: "component", component: LogoConcept  },
-      { type: "component", component: LogoGrid  },
-      { type: "component", component: LogoStructureConcept  },
-      { type: "component", component: LogoStructure  },
-      { type: "component", component: LogoShowcase  },
-      { type: "component", component: FeatureGrid  },
+      { type: "component", component: LogoConcept },
+      { type: "component", component: LogoGrid },
+      { type: "component", component: LogoStructureConcept },
+      { type: "component", component: LogoStructure },
+      { type: "component", component: LogoShowcase },
+      { type: "component", component: FeatureGrid },
     ],
   },
 
@@ -165,6 +166,9 @@ export const sections: Section[] = [
       { id: "office", label: "Office" },
       { id: "midias", label: "Mídias Sociais" },
       { id: "favicon", label: "Ícone Digital" },
+      { id: "website", label: "WebSite" },
+      { id: "website-mobile", label: "Website Mobile" },
+      { id: "post-instagram", label: "Instagram" },
     ],
     slides: [
       {
@@ -199,16 +203,27 @@ export const sections: Section[] = [
         src: "/images/14.webp",
         mobileSrc: "/images/14-mobile.webp",
       },
+      {
+        type: "image",
+        src: "/images/web.webp",
+        mobileSrc: "/images/web-mobile.webp",
+      },
+            {
+        type: "image",
+        src: "/images/mobilesite.webp",
+        mobileSrc: "/images/sitemobile.webp",
+      },
+      { type: "component", component: InstagramPosts },
     ],
   },
   {
     id: "conclusao",
     label: "Conclusão",
-    slides: [{ type: "component", component: Conclusion  }],
+    slides: [{ type: "component", component: Conclusion }],
   },
   {
     id: "construindo-valor",
     label: "Construindo Valor",
-    slides: [{ type: "component", component: FinalCard  }],
+    slides: [{ type: "component", component: FinalCard }],
   },
 ];
