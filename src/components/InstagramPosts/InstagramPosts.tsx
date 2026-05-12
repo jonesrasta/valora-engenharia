@@ -26,8 +26,7 @@ const posts = [
     id: 3,
     image: "/images/post-3.webp",
     title: "Construindo confiança",
-    description:
-      "Cada entrega reflete compromisso, qualidade e alto padrão.",
+    description: "Cada entrega reflete compromisso, qualidade e alto padrão.",
   },
 ];
 
@@ -176,35 +175,32 @@ export default function InstagramPosts() {
                     />
                   </div>
 
-<div className="leading-tight">
-  <h3
-    className="
+                  <div className="leading-tight">
+                    <h3
+                      className="
       text-[11px] md:text-xs
       font-semibold
       text-[#22303E]
       leading-none
     "
-  >
-    valoraengenharia
-  </h3>
+                    >
+                      valoraengenharia
+                    </h3>
 
-  <span
-    className="
+                    <span
+                      className="
       text-[9px] md:text-[10px]
       text-[#22303E]/55
       leading-none
       block mt-0.5
     "
-  >
-    Engenharia & Construção
-  </span>
-</div>
+                    >
+                      Engenharia & Construção
+                    </span>
+                  </div>
                 </div>
 
-                <ArrowUpRight
-                  size={18}
-                  className="text-[#22303E]/50"
-                />
+                <ArrowUpRight size={18} className="text-[#22303E]/50" />
               </div>
 
               {/* IMAGE */}
@@ -235,27 +231,15 @@ export default function InstagramPosts() {
                   pt-4
                 "
               >
-                <div className="flex items-center gap-4">
-                  <Heart
-                    size={22}
-                    className="text-[#22303E]"
-                  />
+                <div className="flex items-center gap-3.5">
+                  <Heart size={24} className="text-red-600 fill-red-600" />
 
-                  <MessageCircle
-                    size={22}
-                    className="text-[#22303E]"
-                  />
+                  <MessageCircle size={24} className="text-[#22303E]" />
 
-                  <Send
-                    size={22}
-                    className="text-[#22303E]"
-                  />
+                  <Send size={24} className="text-[#22303E]" />
                 </div>
 
-                <Bookmark
-                  size={22}
-                  className="text-[#22303E]"
-                />
+                <Bookmark size={24} className="text-[#22303E]" />
               </div>
 
               {/* CONTENT */}

@@ -1,3 +1,4 @@
+import type { ComponentType } from "react";
 import Cover from "../components/Cover/Cover";
 import ColorPalette from "../components/ColorPalette/ColorPalette";
 import TypographyShowcase from "../components/TypographyShowcase/TypographyShowcase";
@@ -19,8 +20,6 @@ import BrandCommunication from "../components/BrandCommunication/BrandCommunicat
 import FinalCard from "../components/FinalCard/FinalCard";
 import Conclusion from "../components/Conclusion/Conclusion";
 import FeatureGrid from "../components/FeatureGrid/FeatureGrid";
-
-import type { ComponentType } from "react";
 import LogoStructure from "../components/LogoStructure/LogoStructure";
 import LogoOnDark from "../components/LogoOnDark/LogoOnDark";
 import InstagramPosts from "../components/InstagramPosts/InstagramPosts";
@@ -123,6 +122,8 @@ export const sections: Section[] = [
       { id: "tom-voz", label: "Tom de Voz" },
       { id: "linguagem-verbal", label: "Linguagem Verbal" },
       { id: "midia-urbana", label: "Mídia Urbana" },
+      { id: "midias", label: "Mídias Sociais" },
+      { id: "instagram", label: "Reels" },
     ],
     slides: [
       { type: "component", component: BrandVoice },
@@ -131,6 +132,12 @@ export const sections: Section[] = [
         type: "image",
         src: "/images/bus-urban.webp",
         mobileSrc: "/images/bus-urban-mobile.webp",
+      },
+      { type: "component", component: InstagramPosts },
+      {
+        type: "image",
+        src: "/images/13.webp",
+        mobileSrc: "/images/13-mobile.webp",
       },
     ],
   },
@@ -163,12 +170,10 @@ export const sections: Section[] = [
       { id: "cartão", label: "Cartão de Visita" },
       { id: "uniforme", label: "Uniforme" },
       { id: "aplicacao-epis", label: "Aplicação em EPIs" },
-      { id: "office", label: "Office" },
-      { id: "midias", label: "Mídias Sociais" },
+      { id: "office", label: "Logo Escritório" },
       { id: "favicon", label: "Ícone Digital" },
       { id: "website", label: "WebSite" },
       { id: "website-mobile", label: "Website Mobile" },
-      { id: "post-instagram", label: "Instagram" },
     ],
     slides: [
       {
@@ -195,11 +200,6 @@ export const sections: Section[] = [
       },
       {
         type: "image",
-        src: "/images/13.webp",
-        mobileSrc: "/images/13-mobile.webp",
-      },
-      {
-        type: "image",
         src: "/images/14.webp",
         mobileSrc: "/images/14-mobile.webp",
       },
@@ -208,12 +208,11 @@ export const sections: Section[] = [
         src: "/images/web.webp",
         mobileSrc: "/images/web-mobile.webp",
       },
-            {
+      {
         type: "image",
         src: "/images/mobilesite.webp",
         mobileSrc: "/images/sitemobile.webp",
       },
-      { type: "component", component: InstagramPosts },
     ],
   },
   {

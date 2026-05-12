@@ -236,15 +236,10 @@ export default function Sidebar({
                           }}
                           className="
                             ml-2
-
                             flex items-center justify-center
-
                             w-6 h-6
-
                             rounded-full
-
                             bg-[#7979791f]
-
                             shrink-0
                           "
                         >
