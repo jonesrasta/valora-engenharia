@@ -20,7 +20,7 @@ export default function LogoStructure() {
 
         {/* DESKTOP */}
         <img
-          src="/public/images/grid-orange.webp"
+          src="/images/grid-orange.webp"
           alt="Valora Grid"
           className="
             w-200
