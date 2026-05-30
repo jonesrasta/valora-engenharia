@@ -211,7 +211,7 @@ export default function Carousel({
       </AnimatePresence>
 
       {/* OVERLAY */}
-      <div
+      {/* <div
         className="
           pointer-events-none
           absolute inset-0
@@ -220,7 +220,7 @@ export default function Carousel({
           via-transparent
           to-black/5
         "
-      />
+      /> */}
 
       {/* CONTROLS */}
       <motion.div
