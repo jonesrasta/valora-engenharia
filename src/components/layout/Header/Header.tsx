@@ -1,14 +1,9 @@
-import { Cross as Hamburger } from "hamburger-react";
-import type {
-  Dispatch,
-  SetStateAction,
-  RefObject,
-} from "react";
+import type { Dispatch, RefObject, SetStateAction } from "react";
 
 interface Props {
   isOpen: boolean;
   setOpen: Dispatch<SetStateAction<boolean>>;
-  menuButtonRef: RefObject<HTMLDivElement | null>;
+  menuButtonRef: RefObject<HTMLButtonElement | null>;
 }
 
 export default function Header({
@@ -24,22 +19,42 @@ export default function Header({
         w-full h-18
         bg-[#22303efa]
         backdrop-blur-md
-        text-white
         flex items-center justify-end
         px-3
         z-40
         shadow-sm
       "
     >
-      <div ref={menuButtonRef}>
-        <Hamburger
-          toggled={isOpen}
-          toggle={setOpen}
-          size={29}
-          duration={0.3}
-          distance="sm"
+      <button
+        ref={menuButtonRef}
+        onClick={() => setOpen((prev) => !prev)}
+        aria-label="Abrir menu"
+        className="relative flex h-12 w-12 items-center justify-center"
+      >
+        <span
+          className={`
+            absolute h-0.5 w-9 rounded-full bg-white
+            transition-all duration-300 ease-in-out
+            ${isOpen ? "rotate-45" : "-translate-y-1"}
+          `}
         />
-      </div>
+
+        {/* <span
+          className={`
+            absolute h-px w-9 rounded-full bg-white
+            transition-all duration-300 ease-in-out
+            ${isOpen ? "opacity-0 scale-0" : ""}
+          `}
+        /> */}
+
+        <span
+          className={`
+            absolute h-0.5 w-9 rounded-full bg-white
+            transition-all duration-300 ease-in-out
+            ${isOpen ? "-rotate-45" : "translate-y-1"}
+          `}
+        />
+      </button>
     </header>
   );
 }
