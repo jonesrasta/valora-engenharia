@@ -18,9 +18,8 @@ interface Props {
   setOpen: (open: boolean) => void;
 
   // REF DO BOTÃO HAMBURGER
-  menuButtonRef: RefObject<HTMLDivElement | null>;
+  menuButtonRef: RefObject<HTMLButtonElement | null>;
 }
-
 export default function Sidebar({
   sections,
   active,

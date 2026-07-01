@@ -17,7 +17,7 @@ export default function App() {
   const [isOpen, setOpen] = useState(false);
 
   // REF DO BOTÃO HAMBURGER
-  const menuButtonRef = useRef<HTMLDivElement | null>(null);
+const menuButtonRef = useRef<HTMLButtonElement | null>(null);
 
   // LISTA FLATTEN
   const flatList: FlatItem[] = useMemo(() => {
